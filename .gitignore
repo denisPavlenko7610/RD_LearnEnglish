@@ -139,3 +139,11 @@ crashlytics-build.properties
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Shared UnityTemplates source junctions
+/Assets/TemplateSources/**/Runtime/
+/Assets/TemplateSources/**/Editor/
+/TestResults/
+/.cache/
+__pycache__/
+*.pyc

@@ -1,0 +1,1317 @@
+{
+  "units": [
+    {
+      "id": "a1.introductions",
+      "level": "A1",
+      "title": "Знакомство и работа",
+      "goal": "Представиться и рассказать, чем вы занимаетесь.",
+      "rule": "Для I используйте am, для he/she/it — is, для you/we/they — are. В вопросе be стоит перед подлежащим.\n\nI am an engineer. — Я инженер.\nAre you ready? — Вы готовы?",
+      "exercises": [
+        {
+          "id": "a1.introductions.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "I ___ a software developer.",
+          "answers": [
+            "am"
+          ],
+          "options": [
+            "are",
+            "am",
+            "is",
+            "be"
+          ],
+          "hint": "Сначала найдите подлежащее: здесь это I.",
+          "explanation": "После I нужна форма am: I am a software developer."
+        },
+        {
+          "id": "a1.introductions.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "My colleague ___ from London.",
+          "answers": [
+            "is"
+          ],
+          "options": [],
+          "hint": "My colleague можно заменить местоимением he или she.",
+          "explanation": "Единственное число третьего лица требует is."
+        },
+        {
+          "id": "a1.introductions.03",
+          "prompt": "Переведите на английский",
+          "context": "Мы готовы.",
+          "answers": [
+            "We are ready",
+            "We're ready"
+          ],
+          "options": [],
+          "hint": "Глагол be нужен и там, где в русском его нет.",
+          "explanation": "We are ready. Сокращённая форма: We’re ready."
+        },
+        {
+          "id": "a1.introductions.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "My name is Alex. I am an engineer. I work in Kyiv.\n\nWhat is Alex’s job? Write the job only.",
+          "answers": [
+            "an engineer",
+            "engineer"
+          ],
+          "options": [],
+          "hint": "Найдите предложение с I am.",
+          "explanation": "Alex говорит: I am an engineer."
+        }
+      ]
+    },
+    {
+      "id": "a1.routines",
+      "level": "A1",
+      "title": "Обычный рабочий день",
+      "goal": "Описать привычки и задать простой вопрос.",
+      "rule": "Present Simple описывает привычки. После he/she/it добавляйте -s. В вопросах используйте do/does; после does глагол без -s.\n\nI work from home.\nDoes she work on Fridays?",
+      "exercises": [
+        {
+          "id": "a1.routines.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "She ___ work at nine every day.",
+          "answers": [
+            "starts"
+          ],
+          "options": [
+            "start",
+            "starting",
+            "starts",
+            "is start"
+          ],
+          "hint": "Every day указывает на привычку.",
+          "explanation": "She — третье лицо: starts."
+        },
+        {
+          "id": "a1.routines.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "___ you work from home?",
+          "answers": [
+            "Do"
+          ],
+          "options": [],
+          "hint": "Это вопрос о привычке с подлежащим you.",
+          "explanation": "Вопрос Present Simple: Do you work from home?"
+        },
+        {
+          "id": "a1.routines.03",
+          "prompt": "Переведите на английский",
+          "context": "Я работаю каждый день.",
+          "answers": [
+            "I work every day"
+          ],
+          "options": [],
+          "hint": "Для регулярного действия используйте Present Simple.",
+          "explanation": "I work every day. После I окончание -s не нужно."
+        },
+        {
+          "id": "a1.routines.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "Dan works from home on Mondays. On Tuesdays he goes to the office.\n\nWhen does he work from home? Write the day.",
+          "answers": [
+            "Monday",
+            "Mondays",
+            "on Mondays",
+            "on Monday"
+          ],
+          "options": [],
+          "hint": "Нужен день работы из дома, а не поездки в офис.",
+          "explanation": "В тексте: from home on Mondays."
+        }
+      ]
+    },
+    {
+      "id": "a1.services",
+      "level": "A1",
+      "title": "Кафе и простые просьбы",
+      "goal": "Вежливо попросить нужное и понять цену.",
+      "rule": "Can I have ...? — простая вежливая просьба. Для одного исчисляемого предмета нужен a/an. Перед гласным звуком — an.\n\nCan I have a coffee, please?\nI would like an apple.",
+      "exercises": [
+        {
+          "id": "a1.services.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "I would like ___ apple.",
+          "answers": [
+            "an"
+          ],
+          "options": [
+            "a",
+            "an",
+            "two",
+            "many"
+          ],
+          "hint": "Ориентируйтесь на первый звук следующего слова.",
+          "explanation": "Apple начинается с гласного звука, поэтому an apple."
+        },
+        {
+          "id": "a1.services.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "Can I ___ a coffee, please?",
+          "answers": [
+            "have"
+          ],
+          "options": [],
+          "hint": "Это устойчивый способ попросить что-то.",
+          "explanation": "Can I have a coffee, please?"
+        },
+        {
+          "id": "a1.services.03",
+          "prompt": "Переведите на английский",
+          "context": "Спасибо.",
+          "answers": [
+            "Thank you",
+            "Thanks"
+          ],
+          "options": [],
+          "hint": "Подойдёт и полная, и короткая повседневная форма.",
+          "explanation": "Thank you и Thanks — стандартные способы поблагодарить."
+        },
+        {
+          "id": "a1.services.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "Tea costs three pounds. Coffee costs four pounds.\n\nHow much is the coffee? Write the amount in words.",
+          "answers": [
+            "four pounds"
+          ],
+          "options": [],
+          "hint": "Найдите цену coffee.",
+          "explanation": "Coffee costs four pounds."
+        }
+      ]
+    },
+    {
+      "id": "a2.past",
+      "level": "A2",
+      "title": "Как прошёл день",
+      "goal": "Рассказать о завершённых событиях.",
+      "rule": "Past Simple нужен для завершённого прошлого. В отрицании did not / didn’t + начальная форма. Неправильные формы учим в контексте.\n\nI finished the report yesterday.\nI didn’t go to the office.",
+      "exercises": [
+        {
+          "id": "a2.past.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "Yesterday I ___ the report.",
+          "answers": [
+            "finished"
+          ],
+          "options": [
+            "finish",
+            "finished",
+            "have finish",
+            "finishing"
+          ],
+          "hint": "Yesterday задаёт завершённое прошлое.",
+          "explanation": "Finished — Past Simple от finish."
+        },
+        {
+          "id": "a2.past.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "I did not ___ to the office yesterday.",
+          "answers": [
+            "go"
+          ],
+          "options": [],
+          "hint": "После did not глагол возвращается к начальной форме.",
+          "explanation": "Did not go, а не did not went."
+        },
+        {
+          "id": "a2.past.03",
+          "prompt": "Переведите на английский",
+          "context": "Я работал вчера.",
+          "answers": [
+            "I worked yesterday"
+          ],
+          "options": [],
+          "hint": "Work — правильный глагол.",
+          "explanation": "I worked yesterday. Для Past Simple добавлено -ed."
+        },
+        {
+          "id": "a2.past.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "I called the hotel on Monday and arrived on Wednesday.\n\nWhen did I arrive? Write the day.",
+          "answers": [
+            "Wednesday",
+            "on Wednesday"
+          ],
+          "options": [],
+          "hint": "Различайте called и arrived.",
+          "explanation": "Arrived on Wednesday — приехал в среду."
+        }
+      ]
+    },
+    {
+      "id": "a2.plans",
+      "level": "A2",
+      "title": "Планы и договорённости",
+      "goal": "Обсудить намерение и уже назначенную встречу.",
+      "rule": "Be going to + глагол — намерение. Present Continuous с будущим временем — договорённость. Will часто выражает решение в момент речи.\n\nI am going to study tonight.\nWe are meeting the client tomorrow.",
+      "exercises": [
+        {
+          "id": "a2.plans.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "We have booked a table. We ___ the client tomorrow.",
+          "answers": [
+            "are meeting"
+          ],
+          "options": [
+            "met",
+            "are meeting",
+            "has met",
+            "meeting"
+          ],
+          "hint": "Бронирование уже сделано: встреча согласована.",
+          "explanation": "Present Continuous подходит для будущей договорённости."
+        },
+        {
+          "id": "a2.plans.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "I am going ___ study tonight.",
+          "answers": [
+            "to"
+          ],
+          "options": [],
+          "hint": "После going в этой конструкции нужна связка с инфинитивом.",
+          "explanation": "Be going to + study."
+        },
+        {
+          "id": "a2.plans.03",
+          "prompt": "Переведите на английский",
+          "context": "Я собираюсь работать завтра.",
+          "answers": [
+            "I am going to work tomorrow",
+            "I'm going to work tomorrow"
+          ],
+          "options": [],
+          "hint": "Речь о намерении: be going to.",
+          "explanation": "I am going to work tomorrow."
+        },
+        {
+          "id": "a2.plans.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "The meeting was planned for ten, but the client moved it to eleven.\n\nWhat time is the meeting now? Write the time in words.",
+          "answers": [
+            "eleven",
+            "at eleven",
+            "eleven o'clock",
+            "at eleven o'clock"
+          ],
+          "options": [],
+          "hint": "Нужно новое время после переноса.",
+          "explanation": "The client moved it to eleven."
+        }
+      ]
+    },
+    {
+      "id": "a2.experience",
+      "level": "A2",
+      "title": "Опыт и результат",
+      "goal": "Сказать, что уже сделано, и сравнить варианты.",
+      "rule": "Present Perfect: have/has + past participle. Он связывает прошлое с настоящим. При точном завершённом времени нужен Past Simple.\n\nI have sent the email.\nI sent it yesterday.",
+      "exercises": [
+        {
+          "id": "a2.experience.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "She ___ already sent the email.",
+          "answers": [
+            "has"
+          ],
+          "options": [
+            "have",
+            "has",
+            "did",
+            "is"
+          ],
+          "hint": "Нужна форма вспомогательного глагола для she.",
+          "explanation": "She has sent — Present Perfect."
+        },
+        {
+          "id": "a2.experience.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "I have never ___ to London. Use the participle of be.",
+          "answers": [
+            "been"
+          ],
+          "options": [],
+          "hint": "Нужна третья форма be.",
+          "explanation": "Have been to означает опыт посещения места."
+        },
+        {
+          "id": "a2.experience.03",
+          "prompt": "Переведите на английский",
+          "context": "Я уже закончил.",
+          "answers": [
+            "I have already finished",
+            "I've already finished"
+          ],
+          "options": [],
+          "hint": "Already обычно стоит между have и причастием.",
+          "explanation": "I have already finished."
+        },
+        {
+          "id": "a2.experience.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "I have used both laptops. The black one is faster, but the silver one is cheaper.\n\nWhich one costs less? Write the colour only.",
+          "answers": [
+            "silver"
+          ],
+          "options": [],
+          "hint": "Costs less соответствует cheaper.",
+          "explanation": "The silver one is cheaper."
+        }
+      ]
+    },
+    {
+      "id": "a2.word-use",
+      "level": "A2",
+      "title": "Слова в полезных сочетаниях",
+      "goal": "Выбрать точное слово для повседневной ситуации.",
+      "rule": "Учите слово вместе с типичным окружением. Borrow — взять на время, lend — дать на время. Say something, но tell someone something.\n\nCan I borrow your charger?\nPlease tell me the address.",
+      "exercises": [
+        {
+          "id": "a2.word-use.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "Can I ___ your charger? I will return it tonight.",
+          "answers": [
+            "borrow"
+          ],
+          "options": [
+            "borrow",
+            "lend",
+            "keep forever",
+            "spend"
+          ],
+          "hint": "Говорящий хочет взять предмет на время.",
+          "explanation": "Borrow — взять у другого; lend — дать другому."
+        },
+        {
+          "id": "a2.word-use.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "Please ___ me the address. Choose say or tell.",
+          "answers": [
+            "tell"
+          ],
+          "options": [],
+          "hint": "После пропуска сразу указан получатель me.",
+          "explanation": "Tell me the address. С say нужно было бы say ... to me."
+        },
+        {
+          "id": "a2.word-use.03",
+          "prompt": "Переведите на английский",
+          "context": "Можно мне одолжить твою ручку? Начните с Can I borrow.",
+          "answers": [
+            "Can I borrow your pen"
+          ],
+          "options": [],
+          "hint": "Pen — один исчисляемый предмет; your заменяет артикль.",
+          "explanation": "Can I borrow your pen? Здесь borrow — взять на время."
+        },
+        {
+          "id": "a2.word-use.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "I lent Sam my charger yesterday. He will give it back tonight.\n\nWho owns the charger: the speaker or Sam?",
+          "answers": [
+            "the speaker",
+            "speaker"
+          ],
+          "options": [],
+          "hint": "Lent — прошедшая форма lend: дал на время.",
+          "explanation": "Зарядка принадлежит говорящему; Sam лишь пользуется ей."
+        }
+      ]
+    },
+    {
+      "id": "a2.conversation",
+      "level": "A2",
+      "title": "Когда вы не расслышали",
+      "goal": "Попросить повторить и уточнить смысл без неловкости.",
+      "rule": "В разговоре важнее восстановить понимание, чем сделать вид, что всё ясно. Could you say that again? — вежливая нейтральная просьба. What do you mean by ...? — уточнение смысла.\n\nCould you say that again, please?\nDo you mean this Friday?",
+      "exercises": [
+        {
+          "id": "a2.conversation.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "You did not hear the delivery time. Choose a polite request.",
+          "answers": [
+            "Could you say that again, please?"
+          ],
+          "options": [
+            "You are wrong.",
+            "Could you say that again, please?",
+            "I disagree with you.",
+            "Never mind the delivery."
+          ],
+          "hint": "Нужно попросить повторить, не спорить и не отказываться от информации.",
+          "explanation": "Could you say that again, please? — вежливо и естественно."
+        },
+        {
+          "id": "a2.conversation.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "What do you mean ___ \"available\"?",
+          "answers": [
+            "by"
+          ],
+          "options": [],
+          "hint": "Mean by — сочетание для вопроса о значении.",
+          "explanation": "What do you mean by ...?"
+        },
+        {
+          "id": "a2.conversation.03",
+          "prompt": "Переведите на английский",
+          "context": "Не могли бы вы повторить это? Используйте say ... again.",
+          "answers": [
+            "Could you say that again",
+            "Could you please say that again",
+            "Could you say that again please"
+          ],
+          "options": [],
+          "hint": "После could нужен глагол в начальной форме.",
+          "explanation": "Could you say that again? Please можно добавить для вежливости."
+        },
+        {
+          "id": "a2.conversation.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "A: Let’s meet next Friday.\nB: Do you mean the 15th?\nA: Yes, the 15th.\n\nWhat is B checking: the date or the place?",
+          "answers": [
+            "the date",
+            "date"
+          ],
+          "options": [],
+          "hint": "B уточняет число месяца.",
+          "explanation": "Do you mean the 15th? проверяет дату, а не место."
+        }
+      ]
+    },
+    {
+      "id": "b1.duration",
+      "level": "B1",
+      "title": "Опыт работы и длительность",
+      "goal": "Различить начало периода и его продолжительность.",
+      "rule": "For — продолжительность; since — момент начала. Present Perfect Continuous подчёркивает продолжающуюся деятельность.\n\nI have worked here since 2020.\nI have been studying for two hours.",
+      "exercises": [
+        {
+          "id": "b1.duration.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "I have worked here ___ 2020.",
+          "answers": [
+            "since"
+          ],
+          "options": [
+            "for",
+            "since",
+            "during",
+            "until"
+          ],
+          "hint": "2020 — точка начала, а не длительность.",
+          "explanation": "Since обозначает начало периода."
+        },
+        {
+          "id": "b1.duration.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "I have been studying ___ two hours.",
+          "answers": [
+            "for"
+          ],
+          "options": [],
+          "hint": "Two hours — длительность.",
+          "explanation": "For two hours — в течение двух часов."
+        },
+        {
+          "id": "b1.duration.03",
+          "prompt": "Переведите на английский",
+          "context": "Я работаю здесь с 2020 года.",
+          "answers": [
+            "I have worked here since 2020",
+            "I've worked here since 2020",
+            "I have been working here since 2020",
+            "I've been working here since 2020"
+          ],
+          "options": [],
+          "hint": "Действие началось в прошлом и связано с настоящим.",
+          "explanation": "Оба варианта Present Perfect допустимы для этой ситуации."
+        },
+        {
+          "id": "b1.duration.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "Mia joined the team in 2021. She still works there and leads the support group.\n\nWhich year did she join? Write the year in digits.",
+          "answers": [
+            "2021"
+          ],
+          "options": [],
+          "hint": "Найдите момент начала работы.",
+          "explanation": "Mia joined the team in 2021."
+        }
+      ]
+    },
+    {
+      "id": "b1.conditions",
+      "level": "B1",
+      "title": "Реальные и возможные решения",
+      "goal": "Обсудить условие и предположить другой вариант.",
+      "rule": "First conditional: if + Present Simple, will + глагол — реальная возможность. Second conditional: if + Past Simple, would + глагол — гипотеза.\n\nIf it rains, I will stay home.\nIf I had more time, I would study more.",
+      "exercises": [
+        {
+          "id": "b1.conditions.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "If the build passes, we ___ it tomorrow.",
+          "answers": [
+            "will release"
+          ],
+          "options": [
+            "released",
+            "will release",
+            "would released",
+            "releasing"
+          ],
+          "hint": "Условие реально и относится к будущему.",
+          "explanation": "First conditional: if + present, will + infinitive."
+        },
+        {
+          "id": "b1.conditions.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "If I had more time, I ___ study more.",
+          "answers": [
+            "would"
+          ],
+          "options": [],
+          "hint": "Had здесь вводит гипотетическую ситуацию.",
+          "explanation": "Second conditional использует would в результате."
+        },
+        {
+          "id": "b1.conditions.03",
+          "prompt": "Переведите на английский",
+          "context": "Если пойдёт дождь, я останусь дома.",
+          "answers": [
+            "If it rains, I will stay at home",
+            "If it rains, I'll stay at home",
+            "If it rains, I will stay home",
+            "If it rains, I'll stay home"
+          ],
+          "options": [],
+          "hint": "Не ставьте will в части после if.",
+          "explanation": "If it rains, I will stay at home."
+        },
+        {
+          "id": "b1.conditions.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "If the delivery arrives before noon, we will install the equipment today. Otherwise, we will install it tomorrow.\n\nIt arrives at 10 a.m. When will installation happen? Write today or tomorrow.",
+          "answers": [
+            "today"
+          ],
+          "options": [],
+          "hint": "10 a.m. — до полудня.",
+          "explanation": "Условие before noon выполнено, значит today."
+        }
+      ]
+    },
+    {
+      "id": "b1.messages",
+      "level": "B1",
+      "title": "Рабочие сообщения",
+      "goal": "Понять просьбу и описать действие в пассиве.",
+      "rule": "Passive: be + past participle. Он полезен, когда важен результат, а исполнитель второстепенен. Could you ...? смягчает просьбу.\n\nThe file was deleted.\nCould you send the report?",
+      "exercises": [
+        {
+          "id": "b1.messages.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "The file ___ yesterday.",
+          "answers": [
+            "was deleted"
+          ],
+          "options": [
+            "was deleted",
+            "has delete",
+            "is deleting",
+            "delete"
+          ],
+          "hint": "Файл не выполняет действие сам; время — вчера.",
+          "explanation": "Past Simple Passive: was deleted."
+        },
+        {
+          "id": "b1.messages.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "Could you ___ me the report? Use send.",
+          "answers": [
+            "send"
+          ],
+          "options": [],
+          "hint": "После could нужен глагол без to.",
+          "explanation": "Could you send me the report?"
+        },
+        {
+          "id": "b1.messages.03",
+          "prompt": "Переведите на английский",
+          "context": "Отчёт был отправлен вчера.",
+          "answers": [
+            "The report was sent yesterday"
+          ],
+          "options": [],
+          "hint": "Нужен пассив в прошлом; send — sent — sent.",
+          "explanation": "The report was sent yesterday."
+        },
+        {
+          "id": "b1.messages.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "Please send the draft by Friday. The final version is due next Tuesday.\n\nWhat is due on Friday? Write draft or final version.",
+          "answers": [
+            "draft",
+            "the draft"
+          ],
+          "options": [],
+          "hint": "У черновика и финальной версии разные сроки.",
+          "explanation": "By Friday относится к draft."
+        }
+      ]
+    },
+    {
+      "id": "b1.phrasal-actions",
+      "level": "B1",
+      "title": "Фразовые глаголы: повседневные действия",
+      "goal": "Правильно поставить объект и местоимение.",
+      "rule": "Turn off — выключить; put off — отложить. Эти значения отделяемые: turn off the light / turn the light off. Местоимение ставится только в середине: turn it off.\n\nPlease turn it off.\nWe put off the meeting until Monday.",
+      "exercises": [
+        {
+          "id": "b1.phrasal-actions.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "The light is too bright. Please ___.",
+          "answers": [
+            "turn it off"
+          ],
+          "options": [
+            "turn off it",
+            "turn it off",
+            "turn it on",
+            "turn off to it"
+          ],
+          "hint": "С местоимением it части отделяемого глагола расходятся.",
+          "explanation": "Turn it off. Вариант turn off it неверен."
+        },
+        {
+          "id": "b1.phrasal-actions.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "We put ___ the meeting until Monday. Use the particle meaning postponed.",
+          "answers": [
+            "off"
+          ],
+          "options": [],
+          "hint": "Речь о переносе встречи на более поздний срок.",
+          "explanation": "Put off a meeting — отложить встречу."
+        },
+        {
+          "id": "b1.phrasal-actions.03",
+          "prompt": "Переведите на английский",
+          "context": "Пожалуйста, выключи это. Используйте turn.",
+          "answers": [
+            "Please turn it off",
+            "Turn it off please"
+          ],
+          "options": [],
+          "hint": "It нужно поставить между глаголом и частицей.",
+          "explanation": "Please turn it off. Не turn off it."
+        },
+        {
+          "id": "b1.phrasal-actions.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "The meeting was put off from Tuesday to Thursday.\n\nWas it cancelled completely? Write yes or no.",
+          "answers": [
+            "no"
+          ],
+          "options": [],
+          "hint": "Перенос и полная отмена — разные действия.",
+          "explanation": "Put off означает postponed: встреча состоится позже."
+        }
+      ]
+    },
+    {
+      "id": "b1.phrasal-work",
+      "level": "B1",
+      "title": "Фразовые глаголы: рабочие вопросы",
+      "goal": "Разобраться в look into и run out of.",
+      "rule": "Look into an issue — изучить проблему, разобраться. Это значение не отделяется: look into it. Run out of — исчерпать запас. Учим конкретное значение с ситуацией.\n\nI will look into it.\nWe have run out of paper.",
+      "exercises": [
+        {
+          "id": "b1.phrasal-work.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "The cause is unclear. I will ___ tomorrow.",
+          "answers": [
+            "look into it"
+          ],
+          "options": [
+            "look it into",
+            "look into it",
+            "look it after",
+            "look to into it"
+          ],
+          "hint": "В значении investigate сочетание look into не разделяется.",
+          "explanation": "Look into it — разобраться в этом."
+        },
+        {
+          "id": "b1.phrasal-work.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "We have run out ___ paper.",
+          "answers": [
+            "of"
+          ],
+          "options": [],
+          "hint": "Устойчивое сочетание состоит из run + out + предлог.",
+          "explanation": "Run out of paper — бумага закончилась."
+        },
+        {
+          "id": "b1.phrasal-work.03",
+          "prompt": "Переведите на английский",
+          "context": "Я разберусь в этом. Используйте look into.",
+          "answers": [
+            "I will look into it",
+            "I'll look into it"
+          ],
+          "options": [],
+          "hint": "Не помещайте it между look и into.",
+          "explanation": "I will look into it."
+        },
+        {
+          "id": "b1.phrasal-work.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "We have run out of ink, so we cannot print the tickets yet.\n\nWhat needs replacing: ink or paper?",
+          "answers": [
+            "ink"
+          ],
+          "options": [],
+          "hint": "Нужен предмет после run out of.",
+          "explanation": "Закончились ink — чернила, а не paper."
+        }
+      ]
+    },
+    {
+      "id": "b1.collocations",
+      "level": "B1",
+      "title": "Естественные словосочетания",
+      "goal": "Говорить make a decision и meet a deadline.",
+      "rule": "Слова сочетаются не произвольно. Make a decision — принять решение; meet a deadline — уложиться в срок; take responsibility — взять ответственность.\n\nWe need to make a decision.\nCan we meet the deadline?",
+      "exercises": [
+        {
+          "id": "b1.collocations.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "We need to ___ a decision today.",
+          "answers": [
+            "make"
+          ],
+          "options": [
+            "do",
+            "make",
+            "perform",
+            "build up"
+          ],
+          "hint": "Decision сочетается с make.",
+          "explanation": "Make a decision — стандартное сочетание."
+        },
+        {
+          "id": "b1.collocations.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "Can we ___ the deadline? Use the verb meaning finish on time.",
+          "answers": [
+            "meet"
+          ],
+          "options": [],
+          "hint": "Здесь meet не значит встретить человека.",
+          "explanation": "Meet the deadline — выполнить к сроку."
+        },
+        {
+          "id": "b1.collocations.03",
+          "prompt": "Переведите на английский",
+          "context": "Нам нужно принять решение. Используйте make.",
+          "answers": [
+            "We need to make a decision"
+          ],
+          "options": [],
+          "hint": "Decision — исчисляемое существительное в единственном числе.",
+          "explanation": "We need to make a decision."
+        },
+        {
+          "id": "b1.collocations.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "The deadline is Friday. We completed the task on Thursday.\n\nDid we meet the deadline? Write yes or no.",
+          "answers": [
+            "yes"
+          ],
+          "options": [],
+          "hint": "Сравните день завершения с последним допустимым днём.",
+          "explanation": "Работа завершена до пятницы: we met the deadline."
+        }
+      ]
+    },
+    {
+      "id": "b2.hypotheses",
+      "level": "B2",
+      "title": "Ошибки прошлого и выводы",
+      "goal": "Обсудить нереальное прошлое и обоснованный вывод.",
+      "rule": "Third conditional: if + had + participle, would have + participle. Must have + participle — уверенный вывод о прошлом.\n\nIf we had tested it, we would have found the bug.\nShe must have missed the email.",
+      "exercises": [
+        {
+          "id": "b2.hypotheses.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "If we had tested it earlier, we ___ the bug.",
+          "answers": [
+            "would have found"
+          ],
+          "options": [
+            "will find",
+            "would have found",
+            "had find",
+            "would finding"
+          ],
+          "hint": "Нереальное условие относится к прошлому.",
+          "explanation": "Результат third conditional: would have found."
+        },
+        {
+          "id": "b2.hypotheses.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "She must ___ missed the email.",
+          "answers": [
+            "have"
+          ],
+          "options": [],
+          "hint": "Для вывода о прошлом нужна конструкция modal + have + participle.",
+          "explanation": "Must have missed — должно быть, пропустила."
+        },
+        {
+          "id": "b2.hypotheses.03",
+          "prompt": "Переведите на английский",
+          "context": "Если бы я знал, я бы помог.",
+          "answers": [
+            "If I had known, I would have helped",
+            "If I had known, I'd have helped",
+            "If I'd known, I would have helped",
+            "If I'd known, I'd have helped"
+          ],
+          "options": [],
+          "hint": "Обе части относятся к несостоявшемуся прошлому.",
+          "explanation": "If I had known, I would have helped."
+        },
+        {
+          "id": "b2.hypotheses.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "The server logs show successful requests until 14:05. No requests were recorded after the power failure at 14:06.\n\nWhen did the power fail? Use HH:MM.",
+          "answers": [
+            "14:06"
+          ],
+          "options": [],
+          "hint": "Отделите время последнего запроса от времени сбоя.",
+          "explanation": "The power failure произошёл at 14:06."
+        }
+      ]
+    },
+    {
+      "id": "b2.decisions",
+      "level": "B2",
+      "title": "Сравнение решений",
+      "goal": "Построить аргумент и указать на ограничение.",
+      "rule": "Although вводит придаточное с подлежащим и глаголом. Despite ставится перед существительным или -ing. However связывает самостоятельные утверждения.\n\nAlthough it is costly, it saves time.\nDespite the cost, we chose it.",
+      "exercises": [
+        {
+          "id": "b2.decisions.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "___ the higher cost, we chose the safer option.",
+          "answers": [
+            "Despite"
+          ],
+          "options": [
+            "Although",
+            "Despite",
+            "However",
+            "Even"
+          ],
+          "hint": "После пропуска — именная группа the higher cost.",
+          "explanation": "Despite + noun phrase. Although требует придаточного."
+        },
+        {
+          "id": "b2.decisions.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "Although the tool ___ expensive, it saves time.",
+          "answers": [
+            "is"
+          ],
+          "options": [],
+          "hint": "В придаточном нужен полноценный глагол.",
+          "explanation": "Although the tool is expensive — грамматически полное придаточное."
+        },
+        {
+          "id": "b2.decisions.03",
+          "prompt": "Переведите на английский",
+          "context": "Несмотря на стоимость, мы выбрали это.",
+          "answers": [
+            "Despite the cost, we chose it",
+            "In spite of the cost, we chose it"
+          ],
+          "options": [],
+          "hint": "Перед существительным подходят despite или in spite of.",
+          "explanation": "Despite the cost, we chose it."
+        },
+        {
+          "id": "b2.decisions.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "Option A is cheaper initially, but requires monthly maintenance. Option B costs more upfront and needs no monthly maintenance.\n\nWhich option needs monthly maintenance? Write A or B.",
+          "answers": [
+            "A",
+            "option A"
+          ],
+          "options": [],
+          "hint": "Сравните текущие расходы, а не начальную цену.",
+          "explanation": "Option A requires monthly maintenance."
+        }
+      ]
+    },
+    {
+      "id": "b2.reporting",
+      "level": "B2",
+      "title": "Передача информации",
+      "goal": "Передать сообщение и сформулировать косвенный вопрос.",
+      "rule": "В косвенном вопросе порядок слов утвердительный: where the file is. В прошедшем reported speech времена часто сдвигаются назад, если контекст этого требует.\n\nCould you tell me where the file is?\nHe said that he was busy at that moment.",
+      "exercises": [
+        {
+          "id": "b2.reporting.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "Could you tell me ___?",
+          "answers": [
+            "where the file is"
+          ],
+          "options": [
+            "where is the file",
+            "where the file is",
+            "where does the file",
+            "where file is the"
+          ],
+          "hint": "После вводной просьбы не нужна инверсия прямого вопроса.",
+          "explanation": "Косвенный вопрос: where the file is."
+        },
+        {
+          "id": "b2.reporting.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "He said he ___ busy at that moment. Use the past form of be.",
+          "answers": [
+            "was"
+          ],
+          "options": [],
+          "hint": "Подлежащее he, время — прошедшее.",
+          "explanation": "He said he was busy at that moment."
+        },
+        {
+          "id": "b2.reporting.03",
+          "prompt": "Переведите на английский",
+          "context": "Не могли бы вы сказать мне, где файл?",
+          "answers": [
+            "Could you tell me where the file is",
+            "Could you please tell me where the file is"
+          ],
+          "options": [],
+          "hint": "Сохраните прямой порядок слов внутри косвенного вопроса.",
+          "explanation": "Could you tell me where the file is?"
+        },
+        {
+          "id": "b2.reporting.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "The manager said the launch had been delayed because testing was incomplete. A new date has not been announced.\n\nHas a new date been announced? Write yes or no.",
+          "answers": [
+            "no"
+          ],
+          "options": [],
+          "hint": "Различайте причину задержки и информацию о новой дате.",
+          "explanation": "A new date has not been announced."
+        }
+      ]
+    },
+    {
+      "id": "b2.idioms",
+      "level": "B2",
+      "title": "Идиомы без буквального перевода",
+      "goal": "Понять on the same page и a rule of thumb.",
+      "rule": "Be on the same page — одинаково понимать ситуацию; уместно в обычном рабочем общении. A rule of thumb — приблизительное практическое правило, не гарантия.\n\nLet’s make sure we’re on the same page.\nAs a rule of thumb, allow extra time.",
+      "exercises": [
+        {
+          "id": "b2.idioms.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "Let’s make sure we’re on the same page before we start. This means:",
+          "answers": [
+            "We understand the plan in the same way."
+          ],
+          "options": [
+            "We understand the plan in the same way.",
+            "We must buy the same book.",
+            "We have finished all the work.",
+            "We disagree about every detail."
+          ],
+          "hint": "Выражение переносное: речь об общем понимании.",
+          "explanation": "On the same page — одинаково понимать план или ситуацию."
+        },
+        {
+          "id": "b2.idioms.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "As a rule of ___, allow extra time for testing.",
+          "answers": [
+            "thumb"
+          ],
+          "options": [],
+          "hint": "Это устойчивое выражение о практическом ориентире.",
+          "explanation": "A rule of thumb — приблизительное практическое правило."
+        },
+        {
+          "id": "b2.idioms.03",
+          "prompt": "Переведите на английский",
+          "context": "Мы одинаково понимаем ситуацию. Используйте on the same page.",
+          "answers": [
+            "We are on the same page",
+            "We're on the same page"
+          ],
+          "options": [],
+          "hint": "Нужна форма be, затем всё выражение.",
+          "explanation": "We are on the same page. Буквальный перевод здесь не помогает."
+        },
+        {
+          "id": "b2.idioms.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "This estimate is only a rule of thumb; measure the actual load before ordering equipment.\n\nIs the estimate an exact guarantee? Write yes or no.",
+          "answers": [
+            "no"
+          ],
+          "options": [],
+          "hint": "Обратите внимание на only и необходимость измерения.",
+          "explanation": "Rule of thumb — ориентир, который не заменяет точные данные."
+        }
+      ]
+    },
+    {
+      "id": "b2.proverbs",
+      "level": "B2",
+      "title": "Пословицы в живом контексте",
+      "goal": "Понять смысл и уместность знакомых выражений.",
+      "rule": "Better late than never — лучше поздно, чем никогда: часто мягкая реакция на запоздалое действие. Actions speak louder than words — поступки важнее слов. Пословица не заменяет конкретный совет и может прозвучать назидательно.\n\nYou finally backed up your files? Better late than never.\nActions speak louder than words: show the working result.",
+      "exercises": [
+        {
+          "id": "b2.proverbs.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "Someone finally starts learning after years of delay. Which saying fits?",
+          "answers": [
+            "Better late than never."
+          ],
+          "options": [
+            "Better late than never.",
+            "Too many cooks spoil the broth.",
+            "No news is good news.",
+            "The early bird catches the worm."
+          ],
+          "hint": "Важен смысл: действие сделано поздно, но всё-таки сделано.",
+          "explanation": "Better late than never подходит к позднему началу. В серьёзном разговоре простой ответ может быть тактичнее."
+        },
+        {
+          "id": "b2.proverbs.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "Actions speak louder than ___.",
+          "answers": [
+            "words"
+          ],
+          "options": [],
+          "hint": "Противопоставляются поступки и обещания.",
+          "explanation": "Actions speak louder than words — важны реальные действия."
+        },
+        {
+          "id": "b2.proverbs.03",
+          "prompt": "Переведите на английский",
+          "context": "Лучше поздно, чем никогда. Используйте английскую пословицу.",
+          "answers": [
+            "Better late than never"
+          ],
+          "options": [],
+          "hint": "Не переводите каждое русское слово отдельно.",
+          "explanation": "Better late than never — устойчивое выражение, без it is в стандартной короткой форме."
+        },
+        {
+          "id": "b2.proverbs.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "A supplier keeps promising improvements but never changes the product. The customer says, \"Actions speak louder than words.\"\n\nDoes the customer want more promises or real changes? Use one of these phrases.",
+          "answers": [
+            "real changes"
+          ],
+          "options": [],
+          "hint": "Важны действия, подтверждающие обещания.",
+          "explanation": "Покупатель ждёт real changes. Пословица здесь выражает недоверие к словам."
+        }
+      ]
+    },
+    {
+      "id": "c1.precision",
+      "level": "C1",
+      "title": "Точность и осторожные выводы",
+      "goal": "Ознакомиться со смягчением категоричных утверждений.",
+      "rule": "Предварительный модуль C1. Hedging помогает соотнести уверенность с доказательствами: appears to, may, is likely to. Не подменяйте вероятность гарантией.\n\nThe change appears to have improved performance.\nThe evidence suggests a possible link.",
+      "exercises": [
+        {
+          "id": "c1.precision.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "Preliminary data ___ that the change may improve reliability.",
+          "answers": [
+            "suggest"
+          ],
+          "options": [
+            "prove beyond doubt",
+            "guarantee",
+            "suggest",
+            "make certain"
+          ],
+          "hint": "Preliminary data — основание для осторожного, а не окончательного вывода.",
+          "explanation": "Suggest соответствует предварительным данным и may."
+        },
+        {
+          "id": "c1.precision.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "The change appears ___ have improved performance.",
+          "answers": [
+            "to"
+          ],
+          "options": [],
+          "hint": "После appears перед have нужен инфинитивный маркер.",
+          "explanation": "Appears to have improved — перфектный инфинитив."
+        },
+        {
+          "id": "c1.precision.03",
+          "prompt": "Переведите на английский",
+          "context": "Это может быть полезно.",
+          "answers": [
+            "This may be useful",
+            "This might be useful",
+            "It may be useful",
+            "It might be useful"
+          ],
+          "options": [],
+          "hint": "Сохраните неопределённость: may или might.",
+          "explanation": "May/might выражают возможность, а не гарантию."
+        },
+        {
+          "id": "c1.precision.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "The sample was small and drawn from one team. The results suggest a benefit, but broader testing is required.\n\nCan the results be treated as conclusive? Write yes or no.",
+          "answers": [
+            "no"
+          ],
+          "options": [],
+          "hint": "Обратите внимание на ограничения выборки.",
+          "explanation": "Малая выборка и необходимость дальнейших тестов исключают окончательный вывод."
+        }
+      ]
+    },
+    {
+      "id": "c1.emphasis",
+      "level": "C1",
+      "title": "Акцент в формальной речи",
+      "goal": "Ознакомиться с инверсией после ограничительных выражений.",
+      "rule": "Предварительный модуль C1. После Only then / Not until в начале предложения возникает инверсия во главной части.\n\nOnly then did we understand the risk.\nNot until Friday did we receive confirmation.",
+      "exercises": [
+        {
+          "id": "c1.emphasis.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "Only then ___ the full impact.",
+          "answers": [
+            "did we understand"
+          ],
+          "options": [
+            "we understood",
+            "did we understand",
+            "we did understood",
+            "understood we did"
+          ],
+          "hint": "Выражение Only then вынесено в начало.",
+          "explanation": "Инверсия: did + subject + base verb."
+        },
+        {
+          "id": "c1.emphasis.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "Not until Friday ___ we receive confirmation.",
+          "answers": [
+            "did"
+          ],
+          "options": [],
+          "hint": "Инверсия в Past Simple требует вспомогательного глагола.",
+          "explanation": "Not until Friday did we receive confirmation."
+        },
+        {
+          "id": "c1.emphasis.03",
+          "prompt": "Переведите на английский",
+          "context": "Только тогда мы поняли риск. Начните с Only then.",
+          "answers": [
+            "Only then did we understand the risk"
+          ],
+          "options": [],
+          "hint": "После did используйте начальную форму understand.",
+          "explanation": "Only then did we understand the risk."
+        },
+        {
+          "id": "c1.emphasis.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "Only after the audit did the team discover the discrepancy. Before the audit, the figures had appeared consistent.\n\nWas the discrepancy discovered before the audit? Write yes or no.",
+          "answers": [
+            "no"
+          ],
+          "options": [],
+          "hint": "Only after указывает, когда стало известно о расхождении.",
+          "explanation": "Расхождение обнаружили только после аудита."
+        }
+      ]
+    },
+    {
+      "id": "c1.synthesis",
+      "level": "C1",
+      "title": "Сопоставление источников",
+      "goal": "Ознакомиться с точным сравнением выводов.",
+      "rule": "Предварительный модуль C1. Whereas подчёркивает различие, both — совпадение, neither — отрицание для двух объектов. При обобщении сохраняйте ограничения источников.\n\nBoth reports identify a delay.\nThe first focuses on cost, whereas the second examines reliability.",
+      "exercises": [
+        {
+          "id": "c1.synthesis.01",
+          "prompt": "Выберите подходящий вариант",
+          "context": "The first report examines cost, ___ the second focuses on reliability.",
+          "answers": [
+            "whereas"
+          ],
+          "options": [
+            "because of",
+            "whereas",
+            "despite",
+            "in spite"
+          ],
+          "hint": "Нужен союз для противопоставления двух полных частей.",
+          "explanation": "Whereas связывает два различающихся утверждения."
+        },
+        {
+          "id": "c1.synthesis.02",
+          "prompt": "Введите пропущенное слово или выражение",
+          "context": "___ reports identify a delay. Use the word meaning the two together.",
+          "answers": [
+            "Both"
+          ],
+          "options": [],
+          "hint": "Нужен определитель, включающий два отчёта.",
+          "explanation": "Both reports — оба отчёта."
+        },
+        {
+          "id": "c1.synthesis.03",
+          "prompt": "Переведите на английский",
+          "context": "Оба отчёта указывают на задержку.",
+          "answers": [
+            "Both reports indicate a delay",
+            "Both reports identify a delay",
+            "Both reports point to a delay"
+          ],
+          "options": [],
+          "hint": "Не заменяйте совпадающий вывод причинным объяснением.",
+          "explanation": "Both reports indicate a delay."
+        },
+        {
+          "id": "c1.synthesis.04",
+          "prompt": "Прочитайте и ответьте по-английски",
+          "context": "Report A attributes the delay to staffing. Report B identifies a delay too, but does not establish its cause.\n\nDo both reports establish staffing as the cause? Write yes or no.",
+          "answers": [
+            "no"
+          ],
+          "options": [],
+          "hint": "Совпадение по факту задержки не означает совпадение по причине.",
+          "explanation": "Только report A связывает задержку со staffing."
+        }
+      ]
+    }
+  ]
+}

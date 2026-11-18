@@ -1,0 +1,15 @@
+{
+  "name": "LearnEnglish.Editor",
+  "rootNamespace": "LearnEnglish.Editor",
+  "references": [
+    "LearnEnglish.Core",
+    "LearnEnglish.Application",
+    "LearnEnglish.Infrastructure",
+    "LearnEnglish.Presentation",
+    "LearnEnglish.Bootstrap",
+    "RD.SceneFlow"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "LearnEnglish.Application",
+  "rootNamespace": "LearnEnglish",
+  "references": [
+    "LearnEnglish.Core"
+  ]
+}

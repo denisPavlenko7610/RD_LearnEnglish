@@ -1,0 +1,10 @@
+{
+  "name": "LearnEnglish.Infrastructure",
+  "rootNamespace": "LearnEnglish",
+  "references": [
+    "LearnEnglish.Core",
+    "LearnEnglish.Application",
+    "RD.Save",
+    "RD.Localization"
+  ]
+}

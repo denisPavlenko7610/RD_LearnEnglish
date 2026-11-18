@@ -1,0 +1,14 @@
+{
+  "name": "LearnEnglish.Bootstrap",
+  "rootNamespace": "LearnEnglish",
+  "references": [
+    "LearnEnglish.Core",
+    "LearnEnglish.Application",
+    "LearnEnglish.Infrastructure",
+    "LearnEnglish.Presentation",
+    "RD.DependencyInjection",
+    "RD.Save",
+    "RD.Localization",
+    "RD.SceneFlow"
+  ]
+}

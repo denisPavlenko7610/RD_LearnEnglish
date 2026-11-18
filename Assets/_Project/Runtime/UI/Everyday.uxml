@@ -1,0 +1,92 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:Style src="Everyday.uss"/>
+    <ui:VisualElement name="appRoot" class="app">
+        <ui:VisualElement class="header">
+            <ui:Label name="brand" class="brand"/>
+            <ui:VisualElement class="grow"/>
+            <ui:Label name="tagline" class="small"/>
+        </ui:VisualElement>
+        <ui:ScrollView name="homeScreen" mode="Vertical">
+            <ui:VisualElement class="home-layout">
+                <ui:VisualElement class="intro">
+                    <ui:Label name="eyebrow" class="eyebrow"/>
+                    <ui:Label name="headline" class="headline"/>
+                    <ui:Label name="subtitle" class="subtitle"/>
+                    <ui:Button name="continueButton" class="primary"/>
+                    <ui:Label name="evidenceSummary" class="evidence"/>
+                    <ui:Label name="reviewCount" class="status"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="course">
+                    <ui:Label name="courseLabel" class="eyebrow"/>
+                    <ui:VisualElement class="tabs">
+                        <ui:Button name="levelA1" text="A1"/>
+                        <ui:Button name="levelA2" text="A2"/>
+                        <ui:Button name="levelB1" text="B1"/>
+                        <ui:Button name="levelB2" text="B2"/>
+                        <ui:Button name="levelC1" text="C1"/>
+                    </ui:VisualElement>
+                    <ui:Label name="topicTitle" class="topic-title"/>
+                    <ui:Label name="topicGoal" class="topic-goal"/>
+                    <ui:Label name="topicProgress" class="small"/>
+                    <ui:Label name="topicRule" class="rule"/>
+                    <ui:VisualElement name="topicImage" class="context-image hidden"/>
+                    <ui:Button name="startButton" class="primary"/>
+                    <ui:VisualElement class="pager">
+                        <ui:Button name="previousUnit"/>
+                        <ui:Label name="unitCounter" class="small"/>
+                        <ui:Button name="nextUnit"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:ScrollView>
+        <ui:ScrollView name="lessonScreen" class="hidden" mode="Vertical">
+            <ui:VisualElement class="lesson-content">
+                <ui:VisualElement class="row">
+                    <ui:Button name="homeButton"/>
+                    <ui:VisualElement class="grow"/>
+                    <ui:Label name="lessonLevel" class="eyebrow"/>
+                </ui:VisualElement>
+                <ui:Label name="lessonTopic" class="topic-title"/>
+                <ui:Label name="lessonEvidence" class="small"/>
+                <ui:VisualElement name="lessonIntro" class="reference hidden">
+                    <ui:Label name="introTitle" class="feedback-title"/>
+                    <ui:Label name="introRule" class="rule"/>
+                    <ui:Button name="beginButton" class="primary"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="exerciseBody">
+                    <ui:Label name="prompt" class="prompt"/>
+                    <ui:Label name="context" class="context"/>
+                    <ui:VisualElement name="answerControls">
+                        <ui:VisualElement name="choices" class="choices">
+                            <ui:Button name="option0"/>
+                            <ui:Button name="option1"/>
+                            <ui:Button name="option2"/>
+                            <ui:Button name="option3"/>
+                        </ui:VisualElement>
+                        <ui:TextField name="answerInput"/>
+                        <ui:Button name="checkButton" class="primary"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="row">
+                        <ui:Button name="hintButton"/>
+                        <ui:Button name="ruleButton"/>
+                        <ui:Label name="assistedStatus" class="small"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="reference" class="reference hidden">
+                        <ui:Label name="referenceTitle" class="feedback-title"/>
+                        <ui:Label name="referenceText" class="rule"/>
+                        <ui:Button name="dismissButton"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="feedback" class="feedback hidden">
+                        <ui:Label name="feedbackTitle" class="feedback-title"/>
+                        <ui:Label name="expectedAnswer" class="feedback-body"/>
+                        <ui:Label name="explanation" class="feedback-body"/>
+                    </ui:VisualElement>
+                    <ui:Label name="saveStatus" class="status"/>
+                    <ui:Button name="retryButton" class="hidden"/>
+                    <ui:Button name="advanceButton" class="primary hidden"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:ScrollView>
+        <ui:Label name="pilotNotice" class="footer"/>
+    </ui:VisualElement>
+</ui:UXML>

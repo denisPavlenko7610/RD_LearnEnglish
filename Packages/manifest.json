@@ -1,8 +1,9 @@
 {
   "dependencies": {
-    "com.unity.2d.animation": "17.0.1",
-    "com.unity.2d.aseprite": "7.0.0",
-    "com.unity.2d.psdimporter": "16.0.0",
+    "com.coplaydev.unity-mcp": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#main",
+    "com.unity.2d.animation": "17.0.3",
+    "com.unity.2d.aseprite": "7.0.2",
+    "com.unity.2d.psdimporter": "16.0.2",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.spriteshape": "17.0.0",
     "com.unity.2d.tilemap": "1.0.0",

@@ -1,0 +1,13 @@
+{
+  "name": "LearnEnglish.PlayModeTests",
+  "references": [
+    "LearnEnglish.Core",
+    "LearnEnglish.Application",
+    "LearnEnglish.Presentation",
+    "LearnEnglish.Bootstrap",
+    "RD.Localization"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

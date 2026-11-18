@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:Style src="Everyday.uss"/>
+    <ui:VisualElement class="app boot">
+        <ui:Label name="brand" class="brand" text="АНГЛИЙСКИЙ / ПРАКТИКА"/>
+        <ui:Label name="bootLoading" text="..."/>
+        <ui:Label name="bootError" class="hidden"/>
+        <ui:Button name="bootRetry" class="primary hidden"/>
+    </ui:VisualElement>
+</ui:UXML>

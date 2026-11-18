@@ -1,0 +1,3 @@
+*.meta whitespace=-blank-at-eol
+*.unity whitespace=-blank-at-eol
+*.asset whitespace=-blank-at-eol
