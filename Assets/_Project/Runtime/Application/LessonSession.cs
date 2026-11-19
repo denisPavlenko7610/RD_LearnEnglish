@@ -16,12 +16,14 @@ namespace LearnEnglish
 		public Profile Profile { get; private set; }
 		public Unit Unit { get; private set; }
 		public Exercise Current { get; private set; }
+		public ReviewContext AlternateContext { get; private set; }
 		public bool Assisted { get; private set; }
 		public bool Answered { get; private set; }
 		public bool Correct { get; private set; }
 		public bool HasPendingSave => _pending != null;
-		public bool UsesChoices =>
-			Current != null && Current.options.Length > 0 && !Profile.items.Any(x => x.id == Current.id);
+		private bool IsFirstAttempt => Current != null && Profile.items.All(x => x.id != Current.id);
+		public bool UsesChoices => IsFirstAttempt && Current.options.Length > 0;
+		public bool UsesAssembly => IsFirstAttempt && Current.HasTokens;
 		public int PendingCount(DateTime utcNow) => Profile.items.Count(x => LearningPolicy.NeedsReview(x, utcNow));
 
 		public LessonSession(Curriculum curriculum, IProfileRepository repository, Profile profile)
@@ -52,6 +54,25 @@ namespace LearnEnglish
 				Assisted = true;
 		}
 
+		public void StartVocabulary(string exerciseId, DateTime utcNow)
+		{
+			if (HasPendingSave)
+				throw new InvalidOperationException("Save the pending answer first.");
+
+			var unit = _curriculum.UnitFor(exerciseId);
+			var exercise = unit.exercises.Single(x => x.id == exerciseId);
+			if (string.IsNullOrEmpty(exercise.vocabularyTerm))
+				throw new ArgumentException("Unknown vocabulary exercise.", nameof(exerciseId));
+
+			Unit = unit;
+			Current = exercise;
+			Answered = false;
+			Assisted = false;
+			var evidence = Profile.items.SingleOrDefault(x => x.id == exerciseId);
+			_currentIsReview = evidence != null && LearningPolicy.NeedsReview(evidence, utcNow);
+			SetReviewContext(evidence);
+		}
+
 		public bool Submit(string answer, DateTime utcNow)
 		{
 			if (Current == null || Answered || HasPendingSave || string.IsNullOrWhiteSpace(answer))
@@ -65,7 +86,7 @@ namespace LearnEnglish
 				Correct,
 				Assisted,
 				utcNow,
-				!UsesChoices,
+				!UsesChoices && !UsesAssembly,
 				_currentIsReview
 			);
 			_pending.Validate(_curriculum);
@@ -115,7 +136,9 @@ namespace LearnEnglish
 			bool canReview = Profile.recentReviews.Count(x => x) < LearningPolicy.ReviewsPerWindow;
 			_currentIsReview = canReview && review != null;
 			if (_currentIsReview)
+			{
 				Current = review;
+			}
 			else
 			{
 				var eligible = Unit.exercises.Where(x =>
@@ -132,6 +155,18 @@ namespace LearnEnglish
 					.ThenBy(x => Profile.items.Any(p => p.id == x.id && p.successes > 0))
 					.ThenBy(x => Profile.items.SingleOrDefault(p => p.id == x.id)?.lastAttempt ?? 0).First();
 			}
+			SetReviewContext(Profile.items.SingleOrDefault(p => p.id == Current.id));
+		}
+
+		private void SetReviewContext(ExerciseProgress evidence)
+		{
+			AlternateContext = _currentIsReview &&
+				evidence != null &&
+				(evidence.failed
+					? !string.IsNullOrEmpty(Current.vocabularyTerm)
+					: evidence.stage % 2 == 1)
+					? Current.AlternateReview
+					: null;
 		}
 	}
 }

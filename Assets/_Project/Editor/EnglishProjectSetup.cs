@@ -3,6 +3,8 @@ using System.IO;
 using LearnEnglish.Core;
 using RD.SceneFlow;
 using UnityEditor;
+using UnityEditor.Build;
+using UnityEditor.Build.Reporting;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -16,6 +18,46 @@ namespace LearnEnglish.Editor
 		private const string UiRoot = "Assets/_Project/Runtime/UI/";
 		private const string PanelPath = "Assets/_Project/Settings/EverydayPanel.asset";
 		private const string CatalogPath = "Assets/_Project/Config/SceneCatalog.asset";
+
+		public static void BuildAndroidPilot()
+		{
+			string[] arguments = Environment.GetCommandLineArgs();
+			int outputIndex = Array.IndexOf(arguments, "-buildOutput") + 1;
+			if (outputIndex == 0 ||
+				outputIndex >= arguments.Length ||
+				!string.Equals(Path.GetExtension(arguments[outputIndex]), ".apk", StringComparison.OrdinalIgnoreCase))
+			{
+				throw new ArgumentException("Pass an APK path with -buildOutput.");
+			}
+
+			string output = Path.GetFullPath(arguments[outputIndex]);
+			Directory.CreateDirectory(Path.GetDirectoryName(output));
+			string previousIdentifier = PlayerSettings.GetApplicationIdentifier(NamedBuildTarget.Android);
+			bool previousBundle = EditorUserBuildSettings.buildAppBundle;
+			try
+			{
+				PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, "com.rd.learnenglish.pilot");
+				EditorUserBuildSettings.buildAppBundle = false;
+				var report = BuildPipeline.BuildPlayer(
+					new BuildPlayerOptions
+					{
+						scenes = new[] { BootScene, AppScene },
+						target = BuildTarget.Android,
+						locationPathName = output,
+						options = BuildOptions.Development
+					}
+				);
+				if (report.summary.result != BuildResult.Succeeded)
+				{
+					throw new BuildFailedException($"Android pilot build {report.summary.result}.");
+				}
+			}
+			finally
+			{
+				PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, previousIdentifier);
+				EditorUserBuildSettings.buildAppBundle = previousBundle;
+			}
+		}
 
 		[MenuItem("Learn English/Prepare Boot and App")]
 		public static void Prepare()

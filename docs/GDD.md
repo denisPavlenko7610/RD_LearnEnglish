@@ -1,24 +1,24 @@
 # RD Learn English — Game Design Document
 
-Version 0.2 · 18 November 2026 · Design authority.
+Version 0.4 · 19 November 2026 · Design authority.
 
 ## 1. Product
 
 A personal, calm English learning application for an adult Russian-speaking learner. Working title: **English /
 Everyday**.
-Use Duolingo only as a reference for approachable interaction. Understanding and practical use take priority. Retain the
-offline foundation from sibling HelpReader.
+Use Duolingo only as a reference for approachable interaction. Understanding and practical use take priority.
 Rewrite the curriculum, progression, screens and tone for an adult. Reuse UnityTemplates infrastructure through source
 links.
 
-The core course aims at practical independent use through B2. C1 is a separate optional expansion for nuance,
-professional communication and longer material. This is a learning tool, not a proficiency certificate or an exam
-guarantee.
-Course completion and demonstrated ability are separate measures. No promised learning time or vocabulary-count
-equivalence.
+The release goal is a complete A1–C1 learning path for practical independent use, including nuance, professional
+communication and longer material at C1. Course completion, demonstrated skills and external proficiency results
+are separate measures. Individual progress depends on the starting level, practice, interaction and feedback.
+The release promises a complete route, continued access to targeted practice and transparent skill evidence.
 
-Initial assumptions: Russian interface/explanations; English content; Windows first, Android landscape next; one local
-profile; offline operation; no account, subscription or backend. These can change without rewriting the learning domain.
+Android is the primary release platform. Design for phone landscape in both directions and keep the interface
+usable in Android-managed window sizes. Windows remains a development and validation target. Use Russian
+interface text and explanations, English learning material and one local profile without an account or
+subscription.
 
 ## 2. Experience pillars
 
@@ -77,40 +77,38 @@ goal,
 a concise explanation, examples, prerequisites for recommendations (not locks), exercise tags and review metadata.
 All published topics remain freely selectable; selecting B1 does not erase A1 or require completing it.
 
-| Level       | Main situations                                                           | Grammar and language focus                                                                                                 | Demonstration target                                                           |
-|-------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| A1          | Introductions, routines, cafe, shopping, directions, time                 | be, pronouns, articles, plurals, present simple, questions, there is/are, can, basic prepositions                          | Introduce yourself, ask simple questions and handle simple transactions        |
-| A2          | Travel problems, appointments, home, work updates, plans                  | past simple/continuous, present continuous, future forms, comparatives, quantifiers, present perfect introduction          | Describe experiences, arrange plans and exchange routine information           |
-| B1          | Projects, explanations, opinions, troubleshooting, correspondence         | tense contrasts, present perfect continuous, first/second conditionals, modals, passive, relative clauses, reported speech | Explain a problem, narrate connected events and write a clear everyday message |
-| B2          | Meetings, negotiations, technical discussions, decisions, longer articles | third/mixed conditionals, modal deduction, complex passive/reporting, discourse markers, collocations, register            | Follow extended arguments, justify a decision and produce clear connected text |
-| C1 optional | Professional writing, complex talks, synthesis, implied meaning           | hedging, emphasis/inversion, register shifts, idiom in context, precision and discourse                                    | Express nuanced meaning and synthesize several substantial sources             |
+| Level | Main situations                                                           | Grammar and language focus                                                                                                 | Demonstration target                                                           |
+|-------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| A1    | Introductions, routines, cafe, shopping, directions, time                 | be, pronouns, articles, plurals, present simple, questions, there is/are, can, basic prepositions                          | Introduce yourself, ask simple questions and handle simple transactions        |
+| A2    | Travel problems, appointments, home, work updates, plans                  | past simple/continuous, present continuous, future forms, comparatives, quantifiers, present perfect introduction          | Describe experiences, arrange plans and exchange routine information           |
+| B1    | Projects, explanations, opinions, troubleshooting, correspondence         | tense contrasts, present perfect continuous, first/second conditionals, modals, passive, relative clauses, reported speech | Explain a problem, narrate connected events and write a clear everyday message |
+| B2    | Meetings, negotiations, technical discussions, decisions, longer articles | third/mixed conditionals, modal deduction, complex passive/reporting, discourse markers, collocations, register            | Follow extended arguments, justify a decision and produce clear connected text |
+| C1    | Professional writing, complex talks, synthesis, implied meaning           | hedging, emphasis/inversion, register shifts, idiom in context, precision and discourse                                    | Express nuanced meaning and synthesize several substantial sources             |
 
 This is a project curriculum proposal mapped to the Council of Europe framework, not a Council-endorsed syllabus.
 Reference: [CEFR descriptors](https://www.coe.int/en/web/common-european-framework-reference-languages/cefr-descriptors).
 Use the framework to review reading, listening, production, interaction and mediation separately. Grammar quizzes alone
 cannot establish B2 or C1 competence.
 
-Full-course production target, subject to editorial review: A1 24 units, A2 28, B1 32, B2 36; approximately 8–12 skills
-per unit and 8–15 distinct exercises per skill. C1 expansion: initially 24 units. These are planning targets, not
-present
-content counts. Rewordings do not count as new vocabulary or distinct communicative objectives.
+Full-course production estimates, subject to editorial review: A1 24 units, A2 28, B1 32, B2 36 and C1 24.
+The CEFR coverage matrix, task variety and independent assessments determine readiness. Rewordings do not count
+as new vocabulary or distinct communicative objectives.
 
 ## 6. Exercise catalogue
 
-| Type                  | Learner action                                                                | Evaluation                                                                         |
-|-----------------------|-------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| Context choice        | Choose a grammatically and semantically suitable continuation                 | Exactly one authored valid choice                                                  |
-| Cloze                 | Type the missing word or phrase in a meaningful sentence                      | Authored alternatives, including legitimate contractions                           |
-| Translation           | Type a short useful English sentence from Russian                             | Explicit equivalents; no fuzzy matching                                            |
-| Sentence construction | Build a sentence from tokens, then type freely on later reviews               | Authored order/alternatives, duplicates supported                                  |
-| Reading               | Read a message/article and answer factual/inference questions                 | Evidence and explanation anchored to the text                                      |
-| Listening             | Hear native speech, optionally replay, answer without seeing transcript first | Licensed local audio with transcript revealed after answer                         |
-| Speaking              | Listen, repeat, record and compare voluntarily                                | No automatic accuracy claims without a validated recognizer                        |
-| Writing / dialogue    | Write a connected reply, role-play or summary                                 | Authored rubric and model answer; self-review clearly separated from scored recall |
+| Type                  | Learner action                                                                | Evaluation                                                                               |
+|-----------------------|-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| Context choice        | Choose a grammatically and semantically suitable continuation                 | Exactly one authored valid choice                                                        |
+| Cloze                 | Type the missing word or phrase in a meaningful sentence                      | Authored alternatives, including legitimate contractions                                 |
+| Translation           | Type a short useful English sentence from Russian                             | Explicit equivalents; no fuzzy matching                                                  |
+| Sentence construction | Build a sentence from tokens, then type freely on later reviews               | Authored order/alternatives, duplicates supported                                        |
+| Reading               | Read a message/article and answer factual/inference questions                 | Evidence and explanation anchored to the text                                            |
+| Listening             | Hear native speech, optionally replay, answer without seeing transcript first | Reviewed, licensed audio may be delivered online. Reveal the transcript after answering. |
+| Speaking              | Listen, repeat, record and compare voluntarily                                | No automatic accuracy claims without a validated recognizer                              |
+| Writing / dialogue    | Write a connected reply, role-play or summary                                 | Authored rubric and model answer; self-review clearly separated from scored recall       |
 
-First implementation includes context choices, typed cloze, short translation and reading comprehension using the same
-answer engine. Token interaction, audio, recording, extended writing and dialogue are later milestones. Never show a
-silent button or textual imitation as if listening/speaking is implemented.
+The pilot includes context choices, typed cloze, short translation, error correction, written dialogues and sentence
+assembly. All use the same answer and review system. Extended writing is a later milestone.
 
 Matching: Unicode normalize, trim, collapse whitespace, ignore case and terminal . ! ?. Preserve apostrophes, inner
 punctuation, word order and diacritics. Equivalent contractions/spellings are explicit content. No automatic typo
@@ -141,23 +139,37 @@ revoke a first pass.
 
 ## 8. Screens and visual direction
 
-Calm editorial workspace: warm off-white, dark ink, teal action colour, restrained amber accents, generous whitespace,
-readable typography, outlined cards, no childish mascot. English sentences are the strongest visual focus.
+The dashboard groups continuation, saved progress and topic selection in separate cards. Editorial fox and owl
+illustrations add atmosphere without affecting the learning flow. The topic preview changes accent by category,
+shows independent recall with a progress bar and lets the learner open the rule before entering the lesson.
+A centered lesson card gives the English question priority. Narrow layouts stack the dashboard and keep vertical
+scrolling.
 
 - Home: Continue, quiet review count, evidence summary, A1/A2/B1/B2/C1 selectors and selected topic card.
 - Topic browser: list/pager of topic names, can-do goals and honest progress; no locked trail or artificial gates.
 - Lesson: topic/level, task instruction, English context, typed field or up to four choices, Hint, Check, feedback and
   Next.
 - Reference: the topic rule/examples in a dismissible panel; assisted status is visible if consulted during an attempt.
+- Settings: Appearance offers five colour themes: dark Midnight (default), Ocean, Forest and Ember, and light Daylight.
+  A header button opens it from home or from a lesson without losing the active exercise. A choice applies at once, is
+  marked by a "Выбрано" tag as well as colour, and is stored in its own versioned `settings-v1` slot, never in learning
+  progress. A failed write keeps the theme for the session and offers a retry message. An unreadable settings file
+  falls back to Midnight without blocking study and is preserved unchanged.
 - Settings later: text size, sound/voice, interface language, local export/import with explicit safeguards.
+
+Visual language: calm layered surfaces, one accent colour per theme reserved for actions and selection, rounded cards,
+a segmented level selector and chips for filters. Answer feedback uses text plus a calm green or amber, never an alarm
+red, and marks the chosen and correct option after an answer. Illustrations stay optional context. Motion is limited to
+short hover and focus transitions; there are no celebratory effects.
 
 Use authored UXML/USS with reusable classes. No runtime-built visual tree. Keyboard order follows visual order, focus is
 visible, feedback uses text plus colour, buttons have comfortable touch targets, paragraphs wrap. Long content can
 scroll.
 No background music by default. Sound is optional; speech is pedagogical media, separate from interface feedback.
 
-Default PC 1280×720 resizable; verify 1920×1080, 16:10, 4:3 and narrow windows. Android landscape in both directions;
-respect safe area and test software keyboard. Portrait is outside the initial scope.
+Android phone landscape is the primary layout. Use both rotations, respect safe areas, and keep the current
+answer and actions visible above the software keyboard. On devices where Android changes orientation or window
+size, preserve the active lesson and show a usable scrollable layout. Default PC 1280×720 resizable.
 
 ## 9. Technical design
 
@@ -182,8 +194,13 @@ duplicate records and schema before applying. Preserve damaged/unsupported files
 retry, never silently replace progress. RD.Save supplies atomic writes/backups. Save answer/review state together.
 No migrations until a public release; later schema changes need versioning, preserved originals and round-trip tests.
 
-No runtime API keys, cloud dependency, analytics or downloaded speech in the slice. Licensed recorded speech is the
-preferred release path. Content data is local JSON; deterministic generation and validators live in Tools.
+Internet access is acceptable for listening and pronunciation. Offline audio and full offline course completion
+are outside release acceptance. Keep progress in the local profile. Use a supported or licensed audio source for
+release. Content data is local JSON with deterministic generation and validators in Tools.
+
+Development builds request the same English web voice used in HelpReader for dictionary entries and short
+authored lesson lines. Requests run only when the learner presses the playback button. They contain the
+selected entry or authored line. Learner answers, recordings and progress stay local.
 
 ## 10. Milestones and acceptance
 
@@ -194,15 +211,14 @@ preview, choices/typed answers/reading, rules and hints, persistent progress, mi
 tests.
 Accept only after Unity compilation, content validation, actual Play smoke and honest remaining-work record.
 
-M2 — learning depth: expand reviewed A1/A2 corpus, skill-level mastery, optional placement, sentence tokens, dictionary,
-settings and import/export. Add native reviewed local audio and listening. Test retention over real study sessions.
+M2 — Android foundation and an end-to-end A1 unit with audio, oral response, writing, recall and delayed review.
 
-M3 — complete core: author/review B1/B2, extended texts, dialogue/writing rubrics and voluntary speaking workflow.
-Audit every unit against communicative goals and actual assessment coverage, then physical Android and standalone
-builds.
+M3 — finish and review A1–A2, then B1–B2. Add optional placement, skill-level evidence, verified vocabulary senses,
+realistic dialogue and longer production. Run delayed assessments and device regression checks at each level.
 
-M4 — C1 extension: substantial content, synthesis, register and advanced production. No C1 completion claim from pilot
-cards.
+M4 — finish and review C1, including sustained listening and reading, flexible interaction, extended writing and
+spoken synthesis. Release the complete route once the course and Android pass the acceptance criteria in
+[Course delivery plan](COURSE_PLAN.md).
 
 ## 11. Quality and risks
 
@@ -216,13 +232,53 @@ Use an isolated save root for checks; never overwrite the learner's profile.
 Native English review and pedagogical sequencing remain release requirements. Open-text alternatives are a major content
 risk; keep tasks narrow until reviewed. A small pilot across levels demonstrates architecture, not a complete course.
 Recognition-only practice cannot deliver the stated goal: listening, speaking and connected writing must be delivered
-before describing the application as a complete B2 learning product.
+before describing the application as a complete A1–C1 learning product.
 
 ## 12. Efficient adult learning
 
+### Vocabulary and phrasal verb lessons
+
+After a vocabulary mistake, an eligible review can use the alternate sentence for the same meaning and saved
+exercise ID. Failed attempts still follow normal mistake spacing during automatic review. A manual retry from
+the dictionary can open the alternate sentence immediately.
+
+The bus reference lesson includes an optional spoken rehearsal and a short driver message. The default action
+plays the message using the same online development voice as the dictionary. The learner can reveal the
+transcript for support, and the lesson reveals it after submission. A playback failure offers the transcript
+and allows another playback attempt. Record general message comprehension for this practice activity.
+The rehearsal supports an optional microphone recording, local playback and deletion. Keep the recording in
+memory for the rehearsal and clear it when the learner leaves the activity or the app is suspended.
+The vocabulary catalog is an offline reference across A1–C1, ordered by general frequency where ranking data is
+available. Search covers English headwords and Russian glosses. Word levels are source tags for individual entries.
+Catalog entries with authored practice link to their lesson. Each assesses a specific sense through typed recall
+in two contexts under the same stable exercise ID. Catalog evidence reads the existing saved attempts, distinguishing
+new material, assisted practice, independent recall, delayed recall and material due for review. Imported reference
+entries remain searchable and carry no assessment status until a corresponding exercise is authored.
+
+High-utility vocabulary and phrasal verbs are a primary path in the topic picker. Each focused lesson explains a few
+related expressions in Russian, gives English examples and contrasts common confusions. Practice combines contextual
+choices, typed gaps, correction of common errors, translation and sentence assembly. Assembly uses a shuffled set of
+tokens, supports undo, and switches to typed recall after the first recorded attempt. Assembly success counts as guided
+recognition and never as independent typed recall. All formats use the same lesson flow and saved review queue. The
+topic picker can filter by vocabulary and phrasal verbs. The pilot remains text-only.
+
+### Dialogues inside lessons
+
+Scenario lessons introduce one practical goal at a time. Initial practice moves from a contextual choice and guided
+sentence assembly to a short typed gap, a written reply and reading comprehension. A recurring setting gives the
+exercises a shared purpose, while each card contains the information needed to answer it on its own. The typed gap
+uses an alternate authored situation on selected scheduled reviews. Prompts constrain short replies to a taught
+expression so that feedback can explain the specific language decision.
+
+Twenty-eight pilot cards place short written conversations in A1–B2 topics. Learners read the exchange, type a short
+English answer, and receive a model answer and a short explanation in Russian. Dialogue cards use the existing review
+schedule and assisted-answer semantics.
+
 One integrated course, without extra trainers. Combine a useful dialogue/text, explanation, active recall, contextual
 application and later revisiting. Previously encountered choice items switch to typed recall without visible options.
-That is evidence of cued recall, not proof of spontaneous conversational ability. Later content adds transfer tasks
+Selected cards use a second authored situation during due review. That situation tests the same target using typed
+recall, keeps its own hint and explanation, and retains the original exercise ID and review schedule. Early practice
+continues with the original situation. This measures cued recall in context. Later content adds broader transfer tasks
 in new situations and connected output with explicit rubrics. No opaque AI score or unvalidated speaking grade.
 
 Teach useful words together with collocations and sentence frames: make a decision, meet a deadline, Could you

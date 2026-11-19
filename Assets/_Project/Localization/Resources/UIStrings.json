@@ -18,15 +18,15 @@
     },
     {
       "key": "eyebrow",
-      "text": "ВАШЕ ПРОСТРАНСТВО ДЛЯ ПРАКТИКИ"
+      "text": "ЛИЧНЫЙ КУРС"
     },
     {
       "key": "headline",
-      "text": "Понимать. Вспоминать.\nИспользовать."
+      "text": "Практика\nанглийского"
     },
     {
       "key": "subtitle",
-      "text": "Живые выражения, понятные объяснения и практика по памяти."
+      "text": "Слова, фразовые глаголы и практика в контексте."
     },
     {
       "key": "continueButton",
@@ -181,8 +181,16 @@
       "text": "Обращение к правилу отмечает текущий ответ как выполненный с подсказкой."
     },
     {
-      "key": "evidenceSummary",
-      "text": "Заданий встречалось: {0}\nВоспроизведено по памяти: {1}\nВспомнилось через время: {2}"
+      "key": "statSeenLabel",
+      "text": "Встречалось"
+    },
+    {
+      "key": "statRecallLabel",
+      "text": "По памяти"
+    },
+    {
+      "key": "statDelayedLabel",
+      "text": "Через время"
     },
     {
       "key": "evidenceNew",
@@ -209,8 +217,392 @@
       "text": "Вспомните ответ и введите по-английски без вариантов"
     },
     {
+      "key": "contextReviewPrompt",
+      "text": "Повторение в новой ситуации. Заполните пропуск по-английски."
+    },
+    {
+      "key": "dialoguePrompt",
+      "text": "Прочитайте диалог и ответьте по-английски."
+    },
+    {
+      "key": "progressTitle",
+      "text": "Ваш прогресс"
+    },
+    {
+      "key": "topicDialogue",
+      "text": "В теме есть диалог"
+    },
+    {
+      "key": "filterAll",
+      "text": "Все темы"
+    },
+    {
+      "key": "filterWords",
+      "text": "Слова"
+    },
+    {
+      "key": "filterPhrasal",
+      "text": "Фразовые глаголы"
+    },
+    {
+      "key": "assemblyEmpty",
+      "text": "Нажимайте на слова в нужном порядке"
+    },
+    {
+      "key": "assemblyUndo",
+      "text": "Убрать последнее"
+    },
+    {
+      "key": "assemblyRecall",
+      "text": "Напишите фразу по-английски без подсказки из слов."
+    },
+    {
       "key": "topicEvidence",
       "text": "По памяти: {0} из {2} · Через время: {1} из {2}"
+    },
+    {
+      "key": "openPreviewRule",
+      "text": "Краткое правило"
+    },
+    {
+      "key": "closePreviewRule",
+      "text": "Свернуть правило"
+    },
+    {
+      "key": "wordTopicLabel",
+      "text": "{0} · СЛОВА"
+    },
+    {
+      "key": "phrasalTopicLabel",
+      "text": "{0} · ФРАЗОВЫЕ ГЛАГОЛЫ"
+    },
+    {
+      "key": "generalTopicLabel",
+      "text": "{0} · УРОК"
+    },
+    {
+      "key": "settingsButton",
+      "text": "Оформление"
+    },
+    {
+      "key": "settingsTitle",
+      "text": "Оформление"
+    },
+    {
+      "key": "settingsSubtitle",
+      "text": "Выберите цветовую тему. Она меняет только внешний вид и сохраняется на этом устройстве."
+    },
+    {
+      "key": "settingsDone",
+      "text": "Готово"
+    },
+    {
+      "key": "themeSaved",
+      "text": "Тема сохранена"
+    },
+    {
+      "key": "themeSaveError",
+      "text": "Тема применена, но не сохранилась на диск. Нажмите на неё ещё раз, чтобы повторить сохранение."
+    },
+    {
+      "key": "themeSelected",
+      "text": "Выбрано"
+    },
+    {
+      "key": "themeMidnightName",
+      "text": "Полночь"
+    },
+    {
+      "key": "themeMidnightNote",
+      "text": "Тёмная · индиго"
+    },
+    {
+      "key": "themeOceanName",
+      "text": "Океан"
+    },
+    {
+      "key": "themeOceanNote",
+      "text": "Тёмная · бирюза"
+    },
+    {
+      "key": "themeForestName",
+      "text": "Лес"
+    },
+    {
+      "key": "themeForestNote",
+      "text": "Тёмная · зелень"
+    },
+    {
+      "key": "themeEmberName",
+      "text": "Уголь"
+    },
+    {
+      "key": "themeEmberNote",
+      "text": "Тёмная · янтарь"
+    },
+    {
+      "key": "themeDaylightName",
+      "text": "День"
+    },
+    {
+      "key": "themeDaylightNote",
+      "text": "Светлая · фиолетовый"
+    },
+    {
+      "key": "vocabularyButton",
+      "text": "Словарь"
+    },
+    {
+      "key": "vocabularyTitle",
+      "text": "Словарь A1–C1"
+    },
+    {
+      "key": "vocabularyBack",
+      "text": "К темам"
+    },
+    {
+      "key": "vocabularySearch",
+      "text": "Поиск по-английски или по-русски"
+    },
+    {
+      "key": "vocabularyLevel",
+      "text": "Уровень"
+    },
+    {
+      "key": "vocabularyKind",
+      "text": "Тип"
+    },
+    {
+      "key": "vocabularyScope",
+      "text": "Показать"
+    },
+    {
+      "key": "vocabularyAllLevels",
+      "text": "Все уровни"
+    },
+    {
+      "key": "vocabularyAllKinds",
+      "text": "Все типы"
+    },
+    {
+      "key": "vocabularyKind_words",
+      "text": "Слова"
+    },
+    {
+      "key": "vocabularyKind_expressions",
+      "text": "Выражения"
+    },
+    {
+      "key": "vocabularyKind_phrasal",
+      "text": "Фразовые глаголы"
+    },
+    {
+      "key": "vocabularyWithPractice",
+      "text": "С заданиями"
+    },
+    {
+      "key": "vocabularyWholeCatalog",
+      "text": "Весь словарь"
+    },
+    {
+      "key": "vocabularyDue",
+      "text": "К повторению"
+    },
+    {
+      "key": "vocabularyEmpty",
+      "text": "В этом разделе ничего не найдено. Измените поиск или фильтры."
+    },
+    {
+      "key": "vocabularyPrevious",
+      "text": "Назад"
+    },
+    {
+      "key": "vocabularyNext",
+      "text": "Далее"
+    },
+    {
+      "key": "vocabularyPage",
+      "text": "{0} / {1} · записей: {2}"
+    },
+    {
+      "key": "vocabularyPractice",
+      "text": "Проверить себя"
+    },
+    {
+      "key": "vocabularyReturn",
+      "text": "К словарю"
+    },
+    {
+      "key": "wordSpeech",
+      "text": "Озвучить"
+    },
+    {
+      "key": "wordSpeechLoading",
+      "text": "Загружаем озвучку…"
+    },
+    {
+      "key": "wordSpeechUnavailable",
+      "text": "Озвучка недоступна. Можно продолжить с текстом."
+    },
+    {
+      "key": "speakModel",
+      "text": "Послушать пример"
+    },
+    {
+      "key": "speakSource",
+      "text": "Послушать онлайн"
+    },
+    {
+      "key": "sourceSpeechUnavailable",
+      "text": "Озвучка недоступна. Попробуйте ещё раз или откройте расшифровку."
+    },
+    {
+      "key": "showSource",
+      "text": "Показать расшифровку"
+    },
+    {
+      "key": "hideSource",
+      "text": "Скрыть расшифровку"
+    },
+    {
+      "key": "modelPractice",
+      "text": "Скажите вслух, чтобы уточнить маршрут:"
+    },
+    {
+      "key": "recordModel",
+      "text": "Записать себя"
+    },
+    {
+      "key": "stopRecording",
+      "text": "Остановить запись"
+    },
+    {
+      "key": "playRecording",
+      "text": "Послушать себя"
+    },
+    {
+      "key": "clearRecording",
+      "text": "Удалить запись"
+    },
+    {
+      "key": "recordingActive",
+      "text": "Идёт запись · до 10 секунд"
+    },
+    {
+      "key": "microphonePermission",
+      "text": "Разрешите микрофон и снова нажмите «Записать себя»."
+    },
+    {
+      "key": "microphoneUnavailable",
+      "text": "Микрофон недоступен. Можно произнести фразу вслух."
+    },
+    {
+      "key": "vocabularyEntry",
+      "text": "{0} · {1} · {2}"
+    },
+    {
+      "key": "vocabularyEntryDetail",
+      "text": "{0}\n{1}"
+    },
+    {
+      "key": "vocabularyNew",
+      "text": "Ещё не проверено"
+    },
+    {
+      "key": "vocabularyNeedsPractice",
+      "text": "Нужно повторить"
+    },
+    {
+      "key": "vocabularyAssisted",
+      "text": "Самостоятельный ответ ещё впереди"
+    },
+    {
+      "key": "vocabularyRecalled",
+      "text": "Вспомнили самостоятельно"
+    },
+    {
+      "key": "vocabularyRetained",
+      "text": "Вспомнили через время"
+    },
+    {
+      "key": "vocabularyReviewDue",
+      "text": "{0} · пора повторить"
+    },
+    {
+      "key": "vocabularyReferenceOnly",
+      "text": "Справочник"
+    },
+    {
+      "key": "vocabularyNoGloss",
+      "text": "Перевод пока отсутствует"
+    },
+    {
+      "key": "vocabularySources",
+      "text": "Уровни: CEFR-J 1.5 (Yukio Tono, TUFS), Octanove 1.0 (CC BY-SA 4.0). Частотность: NGSL 1.2 (Browne, Culligan, Phillips; CC BY-SA 4.0). Переводы: WikDict / Wiktionary / DBnary (CC BY-SA 3.0). Подробнее в docs/ASSETS.md."
+    },
+    {
+      "key": "vocabularyPos_noun",
+      "text": "сущ."
+    },
+    {
+      "key": "vocabularyPos_verb",
+      "text": "глагол"
+    },
+    {
+      "key": "vocabularyPos_adjective",
+      "text": "прил."
+    },
+    {
+      "key": "vocabularyPos_adverb",
+      "text": "наречие"
+    },
+    {
+      "key": "vocabularyPos_pronoun",
+      "text": "местоимение"
+    },
+    {
+      "key": "vocabularyPos_preposition",
+      "text": "предлог"
+    },
+    {
+      "key": "vocabularyPos_conjunction",
+      "text": "союз"
+    },
+    {
+      "key": "vocabularyPos_interjection",
+      "text": "междометие"
+    },
+    {
+      "key": "vocabularyPos_determiner",
+      "text": "определитель"
+    },
+    {
+      "key": "vocabularyPos_number",
+      "text": "числительное"
+    },
+    {
+      "key": "vocabularyPos_modal auxiliary",
+      "text": "модальный глагол"
+    },
+    {
+      "key": "vocabularyPos_be-verb",
+      "text": "глагол be"
+    },
+    {
+      "key": "vocabularyPos_do-verb",
+      "text": "глагол do"
+    },
+    {
+      "key": "vocabularyPos_have-verb",
+      "text": "глагол have"
+    },
+    {
+      "key": "vocabularyPos_infinitive-to",
+      "text": "частица"
+    },
+    {
+      "key": "vocabularyPos_",
+      "text": "слово"
     }
   ]
 }

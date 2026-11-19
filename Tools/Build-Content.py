@@ -6,10 +6,12 @@ units = []
 
 
 def unit(uid, level, title, goal, rule, cards):
-    units.append(dict(id=uid, level=level, title=title, goal=goal, rule=rule, exercises=[
+    topic = dict(id=uid, level=level, title=title, goal=goal, rule=rule, exercises=[
         dict(id=f'{uid}.{i + 1:02}', prompt=p, context=c, answers=a if isinstance(a, list) else [a],
              options=o, hint=h, explanation=e)
-        for i, (p, c, a, o, h, e) in enumerate(cards)]))
+        for i, (p, c, a, o, h, e) in enumerate(cards)])
+    units.append(topic)
+    return topic
 
 
 CHOICE = 'Выберите подходящий вариант'
@@ -239,9 +241,9 @@ unit('c1.synthesis', 'C1', 'Сопоставление источников', '�
 
 strings = {
     'brand': 'АНГЛИЙСКИЙ / ПРАКТИКА', 'tagline': 'Английский для реальной жизни', 'homeNav': 'Обучение',
-    'reviewNav': 'Повторение', 'eyebrow': 'ВАШЕ ПРОСТРАНСТВО ДЛЯ ПРАКТИКИ',
-    'headline': 'Понимать. Вспоминать.\nИспользовать.',
-    'subtitle': 'Живые выражения, понятные объяснения и практика по памяти.',
+    'reviewNav': 'Повторение', 'eyebrow': 'ЛИЧНЫЙ КУРС',
+    'headline': 'Практика\nанглийского',
+    'subtitle': 'Слова, фразовые глаголы и практика в контексте.',
     'continueButton': 'Продолжить обучение', 'reviewButton': 'Повторить трудное',
     'courseLabel': 'ВЫБЕРИТЕ ТЕМУ', 'previousUnit': 'Назад', 'nextUnit': 'Далее',
     'startButton': 'Разобрать тему', 'beginButton': 'Перейти к практике', 'homeButton': 'К темам',
@@ -263,20 +265,98 @@ strings = {
     'levelPreview': 'Предварительная тема C1', 'lessonLabel': 'ПРАКТИКА', 'ruleTitle': 'Коротко о главном',
     'hintTitle': 'Подсказка',
     'ruleAssisted': 'Обращение к правилу отмечает текущий ответ как выполненный с подсказкой.',
-    'evidenceSummary': 'Заданий встречалось: {0}\nВоспроизведено по памяти: {1}\nВспомнилось через время: {2}',
+    'statSeenLabel': 'Встречалось', 'statRecallLabel': 'По памяти', 'statDelayedLabel': 'Через время',
     'evidenceNew': 'Новое задание · сначала разберитесь в смысле',
     'evidenceMistake': 'Нужно повторить · раньше здесь была ошибка',
     'evidenceRetained': 'Вспомнилось через время · это ещё не проверка свободной речи',
     'evidenceRecall': 'Воспроизведено по памяти · предстоит проверка через время',
     'evidenceSeen': 'Уже встречалось · теперь попробуйте без вариантов ответа',
     'recallPrompt': 'Вспомните ответ и введите по-английски без вариантов',
-    'topicEvidence': 'По памяти: {0} из {2} · Через время: {1} из {2}'
+    'contextReviewPrompt': 'Повторение в новой ситуации. Заполните пропуск по-английски.',
+    'dialoguePrompt': 'Прочитайте диалог и ответьте по-английски.',
+    'progressTitle': 'Ваш прогресс',
+    'topicDialogue': 'В теме есть диалог',
+    'filterAll': 'Все темы', 'filterWords': 'Слова', 'filterPhrasal': 'Фразовые глаголы',
+    'assemblyEmpty': 'Нажимайте на слова в нужном порядке', 'assemblyUndo': 'Убрать последнее',
+    'assemblyRecall': 'Напишите фразу по-английски без подсказки из слов.',
+    'topicEvidence': 'По памяти: {0} из {2} · Через время: {1} из {2}',
+    'openPreviewRule': 'Краткое правило', 'closePreviewRule': 'Свернуть правило',
+    'wordTopicLabel': '{0} · СЛОВА', 'phrasalTopicLabel': '{0} · ФРАЗОВЫЕ ГЛАГОЛЫ',
+    'generalTopicLabel': '{0} · УРОК',
+    'settingsButton': 'Оформление', 'settingsTitle': 'Оформление',
+    'settingsSubtitle': 'Выберите цветовую тему. Она меняет только внешний вид и сохраняется на этом устройстве.',
+    'settingsDone': 'Готово', 'themeSaved': 'Тема сохранена',
+    'themeSaveError': 'Тема применена, но не сохранилась на диск. Нажмите на неё ещё раз, чтобы повторить сохранение.',
+    'themeSelected': 'Выбрано',
+    'themeMidnightName': 'Полночь', 'themeMidnightNote': 'Тёмная · индиго',
+    'themeOceanName': 'Океан', 'themeOceanNote': 'Тёмная · бирюза',
+    'themeForestName': 'Лес', 'themeForestNote': 'Тёмная · зелень',
+    'themeEmberName': 'Уголь', 'themeEmberNote': 'Тёмная · янтарь',
+    'themeDaylightName': 'День', 'themeDaylightNote': 'Светлая · фиолетовый',
+    'vocabularyButton': 'Словарь', 'vocabularyTitle': 'Словарь A1–C1', 'vocabularyBack': 'К темам',
+    'vocabularySearch': 'Поиск по-английски или по-русски', 'vocabularyLevel': 'Уровень',
+    'vocabularyKind': 'Тип', 'vocabularyScope': 'Показать', 'vocabularyAllLevels': 'Все уровни',
+    'vocabularyAllKinds': 'Все типы', 'vocabularyKind_words': 'Слова', 'vocabularyKind_expressions': 'Выражения',
+    'vocabularyKind_phrasal': 'Фразовые глаголы', 'vocabularyWithPractice': 'С заданиями',
+    'vocabularyWholeCatalog': 'Весь словарь', 'vocabularyDue': 'К повторению',
+    'vocabularyEmpty': 'В этом разделе ничего не найдено. Измените поиск или фильтры.',
+    'vocabularyPrevious': 'Назад', 'vocabularyNext': 'Далее', 'vocabularyPage': '{0} / {1} · записей: {2}',
+    'vocabularyPractice': 'Проверить себя', 'vocabularyReturn': 'К словарю',
+    'wordSpeech': 'Озвучить', 'wordSpeechLoading': 'Загружаем озвучку…',
+    'wordSpeechUnavailable': 'Озвучка недоступна. Можно продолжить с текстом.',
+    'speakModel': 'Послушать пример', 'speakSource': 'Послушать онлайн',
+    'sourceSpeechUnavailable': 'Озвучка недоступна. Попробуйте ещё раз или откройте расшифровку.',
+    'showSource': 'Показать расшифровку', 'hideSource': 'Скрыть расшифровку',
+    'modelPractice': 'Скажите вслух, чтобы уточнить маршрут:',
+    'recordModel': 'Записать себя', 'stopRecording': 'Остановить запись',
+    'playRecording': 'Послушать себя', 'clearRecording': 'Удалить запись',
+    'recordingActive': 'Идёт запись · до 10 секунд',
+    'microphonePermission': 'Разрешите микрофон и снова нажмите «Записать себя».',
+    'microphoneUnavailable': 'Микрофон недоступен. Можно произнести фразу вслух.',
+    'vocabularyEntry': '{0} · {1} · {2}', 'vocabularyEntryDetail': '{0}\n{1}',
+    'vocabularyNew': 'Ещё не проверено', 'vocabularyNeedsPractice': 'Нужно повторить',
+    'vocabularyAssisted': 'Самостоятельный ответ ещё впереди', 'vocabularyRecalled': 'Вспомнили самостоятельно',
+    'vocabularyRetained': 'Вспомнили через время', 'vocabularyReviewDue': '{0} · пора повторить',
+    'vocabularyReferenceOnly': 'Справочник', 'vocabularyNoGloss': 'Перевод пока отсутствует',
+    'vocabularySources': 'Уровни: CEFR-J 1.5 (Yukio Tono, TUFS), Octanove 1.0 (CC BY-SA 4.0). Частотность: NGSL 1.2 (Browne, Culligan, Phillips; CC BY-SA 4.0). Переводы: WikDict / Wiktionary / DBnary (CC BY-SA 3.0). Подробнее в docs/ASSETS.md.',
+    'vocabularyPos_noun': 'сущ.', 'vocabularyPos_verb': 'глагол', 'vocabularyPos_adjective': 'прил.',
+    'vocabularyPos_adverb': 'наречие', 'vocabularyPos_pronoun': 'местоимение', 'vocabularyPos_preposition': 'предлог',
+    'vocabularyPos_conjunction': 'союз', 'vocabularyPos_interjection': 'междометие',
+    'vocabularyPos_determiner': 'определитель', 'vocabularyPos_number': 'числительное',
+    'vocabularyPos_modal auxiliary': 'модальный глагол', 'vocabularyPos_be-verb': 'глагол be',
+    'vocabularyPos_do-verb': 'глагол do', 'vocabularyPos_have-verb': 'глагол have',
+    'vocabularyPos_infinitive-to': 'частица', 'vocabularyPos_': 'слово',
 }
 
-from ContentExpressions import extend
+from ContentExpressions import extend, review_contexts
+from ContentDialogues import DIALOGUES
+from ContentScenarios import extend_scenarios
+from ContentVocabulary import extend_vocabulary
+from ContentWordLessons import extend_word_lessons
 
 extend(unit, CHOICE, GAP, TRANSLATE, READ)
+extend_word_lessons(unit, CHOICE, GAP)
+exercises_by_id = {card['id']: card for topic in units for card in topic['exercises']}
+for card_id, context, hint, explanation in review_contexts:
+    exercises_by_id[card_id]['reviewContext'] = dict(context=context, hint=hint, explanation=explanation)
+units_by_id = {topic['id']: topic for topic in units}
+for key in ('a2.word-use', 'b1.collocations'):
+    units_by_id[key]['track'] = 'words'
+for key in ('b1.phrasal-actions', 'b1.phrasal-work'):
+    units_by_id[key]['track'] = 'phrasal'
+for topic, key, lines, question, answers, hint, explanation in DIALOGUES:
+    units_by_id[topic]['exercises'].append(dict(
+        id=f'{topic}.dialogue.{key}', prompt=strings['dialoguePrompt'], context=question, answers=answers,
+        options=[], hint=hint, explanation=explanation,
+        dialogue='\n\n'.join(f'{name}: {line}' for name, line in lines)))
+extend_scenarios(unit, CHOICE, GAP, READ, strings['dialoguePrompt'])
+extend_vocabulary(unit)
 units.sort(key=lambda x: ['A1', 'A2', 'B1', 'B2', 'C1'].index(x['level']))
+bus_index = next(index for index, topic in enumerate(units) if topic['id'] == 'a1.bus-stop')
+for index, topic_id in enumerate(('a1.bus-vocabulary', 'a1.public-transport-actions'), start=1):
+    topic = next(unit for unit in units if unit['id'] == topic_id)
+    units.remove(topic)
+    units.insert(bus_index + index, topic)
 
 if __name__ == '__main__':
     targets = {

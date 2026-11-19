@@ -29,8 +29,11 @@ namespace LearnEnglish.Tests
 		public void EntireCurriculumHasValidChoicesAndExplanations()
 		{
 			_curriculum.Validate();
-			Assert.That(_curriculum.units.Length, Is.EqualTo(22));
-			Assert.That(_curriculum.Exercises.Count(), Is.EqualTo(88));
+			Assert.That(_curriculum.units.Length, Is.EqualTo(72));
+			Assert.That(_curriculum.Exercises.Count(), Is.EqualTo(344));
+			Assert.That(_curriculum.Exercises.Count(x => !string.IsNullOrEmpty(x.vocabularyTerm)), Is.EqualTo(121));
+			Assert.That(_curriculum.Exercises.Count(x => x.HasTokens), Is.EqualTo(26));
+			Assert.That(_curriculum.Exercises.Count(x => x.IsDialogue), Is.EqualTo(28));
 			Assert.That(
 				_curriculum.units.Select(x => x.level).Distinct(),
 				Is.EquivalentTo(new[] { "A1", "A2", "B1", "B2", "C1" })
@@ -254,6 +257,59 @@ namespace LearnEnglish.Tests
 			save.GetResult();
 			session.Next(_now);
 			Assert.That(session.Current.id, Is.EqualTo(Card.id));
+		}
+
+		[UnityTest]
+		public IEnumerator DueReviewUsesNewContextAndRecordsRecallUnderOriginalId()
+		{
+			var unit = _curriculum.units.Single(x => x.id == "b1.phrasal-actions");
+			var card = unit.exercises[0];
+			var repository = new MemoryRepository();
+			var fresh = new LessonSession(_curriculum, repository, new Profile());
+			fresh.Start(unit, _now);
+			Assert.That(fresh.UsesChoices, Is.True);
+			Assert.That(fresh.AlternateContext, Is.Null);
+			var recognized = LearningPolicy.Record(new Profile(), unit.id, card, true, false, _now, false);
+			var session = new LessonSession(_curriculum, repository, recognized);
+			session.Start(unit, _now);
+			Assert.That(session.AlternateContext, Is.Null);
+			var due = _now.AddDays(1);
+			session.Start(unit, due);
+			Assert.That(session.AlternateContext.context, Does.Contain("radio"));
+			Assert.That(session.UsesChoices, Is.False);
+			Assert.That(session.Submit("turn it off", due), Is.True);
+			var save = session.PersistAsync().GetAwaiter();
+			while (!save.IsCompleted)
+			{
+				yield return null;
+			}
+			save.GetResult();
+			var saved = repository.Snapshot.items.Single();
+			Assert.That(saved.id, Is.EqualTo(card.id));
+			Assert.That(saved.delayedRecalls, Is.EqualTo(1));
+			session.Start(unit, due.AddDays(3));
+			Assert.That(session.Current.id, Is.EqualTo(card.id));
+			Assert.That(session.AlternateContext, Is.Null);
+		}
+
+		[Test]
+		public void VocabularyMistakeReturnsInAnotherContextAfterTwoAnswers()
+		{
+			var unit = _curriculum.units.Single(x => x.id == "a1.public-transport-actions");
+			var card = unit.exercises.Single(x => x.vocabularyTerm == "get off");
+			var profile = LearningPolicy.Record(new Profile(), unit.id, card, false, false, _now);
+			var session = new LessonSession(_curriculum, new MemoryRepository(), profile);
+			session.Start(unit, _now);
+			Assert.That(session.Current, Is.Not.SameAs(card));
+
+			foreach (var other in unit.exercises.Where(x => x != card).Take(LearningPolicy.MistakeSpacing))
+			{
+				profile = LearningPolicy.Record(profile, unit.id, other, true, false, _now);
+			}
+			var restarted = new LessonSession(_curriculum, new MemoryRepository(), profile);
+			restarted.Start(unit, _now);
+			Assert.That(restarted.Current, Is.SameAs(card));
+			Assert.That(restarted.AlternateContext.context, Does.Contain("tram"));
 		}
 
 		private sealed class MemoryRepository : IProfileRepository

@@ -2,60 +2,214 @@
     <ui:Style src="Everyday.uss"/>
     <ui:VisualElement name="appRoot" class="app">
         <ui:VisualElement class="header">
+            <ui:VisualElement class="brand-mark" picking-mode="Ignore">
+                <ui:VisualElement class="brand-mark-core" picking-mode="Ignore"/>
+            </ui:VisualElement>
             <ui:Label name="brand" class="brand"/>
             <ui:VisualElement class="grow"/>
-            <ui:Label name="tagline" class="small"/>
+            <ui:Label name="tagline" class="tagline"/>
+            <ui:Button name="settingsButton" class="header-button"/>
         </ui:VisualElement>
         <ui:ScrollView name="homeScreen" mode="Vertical">
             <ui:VisualElement class="home-layout">
-                <ui:VisualElement class="intro">
-                    <ui:Label name="eyebrow" class="eyebrow"/>
-                    <ui:Label name="headline" class="headline"/>
-                    <ui:Label name="subtitle" class="subtitle"/>
-                    <ui:Button name="continueButton" class="primary"/>
-                    <ui:Label name="evidenceSummary" class="evidence"/>
-                    <ui:Label name="reviewCount" class="status"/>
+                <ui:VisualElement class="dashboard">
+                    <ui:VisualElement class="intro illustrated-hero">
+                        <ui:Label name="eyebrow" class="eyebrow"/>
+                        <ui:Label name="headline" class="headline"/>
+                        <ui:Label name="subtitle" class="subtitle"/>
+                        <ui:Button name="continueButton" class="accent"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="progress-card">
+                        <ui:VisualElement class="row progress-head">
+                            <ui:Label name="progressTitle" class="card-title"/>
+                            <ui:VisualElement class="grow"/>
+                            <ui:Label name="reviewCount" class="pill"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="stats">
+                            <ui:VisualElement class="stat">
+                                <ui:Label name="statSeen" class="stat-value"/>
+                                <ui:Label name="statSeenLabel" class="stat-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="stat stat-recall">
+                                <ui:Label name="statRecall" class="stat-value"/>
+                                <ui:Label name="statRecallLabel" class="stat-label"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="stat stat-delayed">
+                                <ui:Label name="statDelayed" class="stat-value"/>
+                                <ui:Label name="statDelayedLabel" class="stat-label"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:VisualElement class="course">
-                    <ui:Label name="courseLabel" class="eyebrow"/>
-                    <ui:VisualElement class="tabs">
+                    <ui:VisualElement class="row">
+                        <ui:Label name="courseLabel" class="eyebrow"/>
+                        <ui:VisualElement class="grow"/>
+                        <ui:Button name="vocabularyButton" class="ghost"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="topic-filters row">
+                        <ui:Button name="filterAll"/>
+                        <ui:Button name="filterWords"/>
+                        <ui:Button name="filterPhrasal"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="levelTabs" class="tabs">
                         <ui:Button name="levelA1" text="A1"/>
                         <ui:Button name="levelA2" text="A2"/>
                         <ui:Button name="levelB1" text="B1"/>
                         <ui:Button name="levelB2" text="B2"/>
                         <ui:Button name="levelC1" text="C1"/>
                     </ui:VisualElement>
-                    <ui:Label name="topicTitle" class="topic-title"/>
-                    <ui:Label name="topicGoal" class="topic-goal"/>
-                    <ui:Label name="topicProgress" class="small"/>
-                    <ui:Label name="topicRule" class="rule"/>
+                    <ui:VisualElement name="topicPreview" class="topic-preview">
+                        <ui:Label name="topicLevel" class="topic-level"/>
+                        <ui:Label name="topicTitle" class="topic-title"/>
+                        <ui:Label name="topicGoal" class="topic-goal"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="topic-evidence">
+                        <ui:Label name="topicDialogue" class="dialogue-tag hidden"/>
+                        <ui:Label name="topicProgress" class="small"/>
+                        <ui:ProgressBar name="topicMeter" class="topic-meter"/>
+                    </ui:VisualElement>
                     <ui:VisualElement name="topicImage" class="context-image hidden"/>
-                    <ui:Button name="startButton" class="primary"/>
+                    <ui:Label name="topicRule" class="rule rule-preview hidden"/>
+                    <ui:VisualElement class="topic-actions row">
+                        <ui:Button name="startButton" class="primary grow"/>
+                        <ui:Button name="previewRule" class="subtle-action"/>
+                    </ui:VisualElement>
                     <ui:VisualElement class="pager">
-                        <ui:Button name="previousUnit"/>
+                        <ui:Button name="previousUnit" class="ghost"/>
                         <ui:Label name="unitCounter" class="small"/>
-                        <ui:Button name="nextUnit"/>
+                        <ui:Button name="nextUnit" class="ghost"/>
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:ScrollView>
+        <ui:ScrollView name="vocabularyScreen" class="hidden" mode="Vertical">
+            <ui:VisualElement class="lesson-content vocabulary-content">
+                <ui:VisualElement class="row lesson-bar">
+                    <ui:Button name="vocabularyBack" class="ghost"/>
+                    <ui:VisualElement class="grow"/>
+                    <ui:Label name="vocabularyTitle" class="topic-title"/>
+                </ui:VisualElement>
+                <ui:TextField name="vocabularySearch"/>
+                <ui:VisualElement class="row vocabulary-filters">
+                    <ui:DropdownField name="vocabularyLevel"/>
+                    <ui:DropdownField name="vocabularyKind"/>
+                    <ui:DropdownField name="vocabularyScope"/>
+                </ui:VisualElement>
+                <ui:Label name="vocabularyEmpty" class="small hidden"/>
+                <ui:Label name="vocabularySpeechStatus" class="small"/>
+                <ui:VisualElement name="vocabularyRow0" class="row vocabulary-row">
+                    <ui:VisualElement class="vocabulary-entry">
+                        <ui:Label class="vocabulary-term"/>
+                        <ui:Label class="vocabulary-meaning"/>
+                    </ui:VisualElement>
+                    <ui:Button class="ghost"/>
+                    <ui:Button class="ghost vocabulary-speak hidden"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="vocabularyRow1" class="row vocabulary-row">
+                    <ui:VisualElement class="vocabulary-entry">
+                        <ui:Label class="vocabulary-term"/>
+                        <ui:Label class="vocabulary-meaning"/>
+                    </ui:VisualElement>
+                    <ui:Button class="ghost"/>
+                    <ui:Button class="ghost vocabulary-speak hidden"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="vocabularyRow2" class="row vocabulary-row">
+                    <ui:VisualElement class="vocabulary-entry">
+                        <ui:Label class="vocabulary-term"/>
+                        <ui:Label class="vocabulary-meaning"/>
+                    </ui:VisualElement>
+                    <ui:Button class="ghost"/>
+                    <ui:Button class="ghost vocabulary-speak hidden"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="vocabularyRow3" class="row vocabulary-row">
+                    <ui:VisualElement class="vocabulary-entry">
+                        <ui:Label class="vocabulary-term"/>
+                        <ui:Label class="vocabulary-meaning"/>
+                    </ui:VisualElement>
+                    <ui:Button class="ghost"/>
+                    <ui:Button class="ghost vocabulary-speak hidden"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="vocabularyRow4" class="row vocabulary-row">
+                    <ui:VisualElement class="vocabulary-entry">
+                        <ui:Label class="vocabulary-term"/>
+                        <ui:Label class="vocabulary-meaning"/>
+                    </ui:VisualElement>
+                    <ui:Button class="ghost"/>
+                    <ui:Button class="ghost vocabulary-speak hidden"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="vocabularyRow5" class="row vocabulary-row">
+                    <ui:VisualElement class="vocabulary-entry">
+                        <ui:Label class="vocabulary-term"/>
+                        <ui:Label class="vocabulary-meaning"/>
+                    </ui:VisualElement>
+                    <ui:Button class="ghost"/>
+                    <ui:Button class="ghost vocabulary-speak hidden"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="vocabularyRow6" class="row vocabulary-row">
+                    <ui:VisualElement class="vocabulary-entry">
+                        <ui:Label class="vocabulary-term"/>
+                        <ui:Label class="vocabulary-meaning"/>
+                    </ui:VisualElement>
+                    <ui:Button class="ghost"/>
+                    <ui:Button class="ghost vocabulary-speak hidden"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="vocabularyRow7" class="row vocabulary-row">
+                    <ui:VisualElement class="vocabulary-entry">
+                        <ui:Label class="vocabulary-term"/>
+                        <ui:Label class="vocabulary-meaning"/>
+                    </ui:VisualElement>
+                    <ui:Button class="ghost"/>
+                    <ui:Button class="ghost vocabulary-speak hidden"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="pager">
+                    <ui:Button name="vocabularyPrevious" class="ghost"/>
+                    <ui:Label name="vocabularyPage" class="small"/>
+                    <ui:Button name="vocabularyNext" class="ghost"/>
+                </ui:VisualElement>
+                <ui:Label name="vocabularySources" class="footer vocabulary-sources"/>
+            </ui:VisualElement>
+        </ui:ScrollView>
         <ui:ScrollView name="lessonScreen" class="hidden" mode="Vertical">
             <ui:VisualElement class="lesson-content">
-                <ui:VisualElement class="row">
-                    <ui:Button name="homeButton"/>
+                <ui:VisualElement class="row lesson-bar">
+                    <ui:Button name="homeButton" class="ghost"/>
                     <ui:VisualElement class="grow"/>
-                    <ui:Label name="lessonLevel" class="eyebrow"/>
+                    <ui:Label name="lessonLevel" class="pill"/>
                 </ui:VisualElement>
                 <ui:Label name="lessonTopic" class="topic-title"/>
-                <ui:Label name="lessonEvidence" class="small"/>
+                <ui:Label name="lessonEvidence" class="evidence-note"/>
                 <ui:VisualElement name="lessonIntro" class="reference hidden">
                     <ui:Label name="introTitle" class="feedback-title"/>
                     <ui:Label name="introRule" class="rule"/>
+                    <ui:VisualElement name="modelPractice" class="hidden">
+                        <ui:Label name="modelInstruction" class="small"/>
+                        <ui:Label name="modelPhrase" class="dialogue-text"/>
+                        <ui:VisualElement class="row">
+                            <ui:Button name="speakModel" class="ghost hidden"/>
+                            <ui:Label name="modelStatus" class="small"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="row">
+                            <ui:Button name="recordModel" class="ghost"/>
+                            <ui:Button name="playRecording" class="ghost"/>
+                            <ui:Button name="clearRecording" class="ghost"/>
+                        </ui:VisualElement>
+                        <ui:Label name="recordingStatus" class="small"/>
+                    </ui:VisualElement>
                     <ui:Button name="beginButton" class="primary"/>
                 </ui:VisualElement>
                 <ui:VisualElement name="exerciseBody">
                     <ui:Label name="prompt" class="prompt"/>
+                    <ui:Label name="dialogueText" class="dialogue-text hidden"/>
                     <ui:Label name="context" class="context"/>
+                    <ui:VisualElement name="sourcePractice" class="hidden">
+                        <ui:VisualElement class="row">
+                            <ui:Button name="speakSource" class="primary hidden"/>
+                            <ui:Button name="showSource" class="ghost hidden"/>
+                        </ui:VisualElement>
+                        <ui:Label name="sourceStatus" class="small"/>
+                        <ui:Label name="sourceTranscript" class="dialogue-text hidden"/>
+                    </ui:VisualElement>
                     <ui:VisualElement name="answerControls">
                         <ui:VisualElement name="choices" class="choices">
                             <ui:Button name="option0"/>
@@ -63,12 +217,26 @@
                             <ui:Button name="option2"/>
                             <ui:Button name="option3"/>
                         </ui:VisualElement>
+                        <ui:VisualElement name="assembly" class="assembly hidden">
+                            <ui:Label name="assemblyAnswer" class="assembly-answer"/>
+                            <ui:VisualElement class="row">
+                                <ui:Button name="token0" class="word-token"/>
+                                <ui:Button name="token1" class="word-token"/>
+                                <ui:Button name="token2" class="word-token"/>
+                                <ui:Button name="token3" class="word-token"/>
+                                <ui:Button name="token4" class="word-token"/>
+                                <ui:Button name="token5" class="word-token"/>
+                                <ui:Button name="token6" class="word-token"/>
+                                <ui:Button name="token7" class="word-token"/>
+                            </ui:VisualElement>
+                            <ui:Button name="assemblyUndo" class="ghost"/>
+                        </ui:VisualElement>
                         <ui:TextField name="answerInput"/>
                         <ui:Button name="checkButton" class="primary"/>
                     </ui:VisualElement>
-                    <ui:VisualElement class="row">
-                        <ui:Button name="hintButton"/>
-                        <ui:Button name="ruleButton"/>
+                    <ui:VisualElement class="row help-row">
+                        <ui:Button name="hintButton" class="ghost"/>
+                        <ui:Button name="ruleButton" class="ghost"/>
                         <ui:Label name="assistedStatus" class="small"/>
                     </ui:VisualElement>
                     <ui:VisualElement name="reference" class="reference hidden">
@@ -79,12 +247,96 @@
                     <ui:VisualElement name="feedback" class="feedback hidden">
                         <ui:Label name="feedbackTitle" class="feedback-title"/>
                         <ui:Label name="expectedAnswer" class="feedback-body"/>
+                        <ui:VisualElement class="row">
+                            <ui:Button name="speakAnswer" class="ghost hidden"/>
+                            <ui:Label name="speechAnswerStatus" class="small"/>
+                        </ui:VisualElement>
                         <ui:Label name="explanation" class="feedback-body"/>
                     </ui:VisualElement>
                     <ui:Label name="saveStatus" class="status"/>
                     <ui:Button name="retryButton" class="hidden"/>
                     <ui:Button name="advanceButton" class="primary hidden"/>
                 </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:ScrollView>
+        <ui:ScrollView name="settingsScreen" class="hidden" mode="Vertical">
+            <ui:VisualElement class="settings-content">
+                <ui:Label name="settingsTitle" class="topic-title"/>
+                <ui:Label name="settingsSubtitle" class="topic-goal"/>
+                <ui:VisualElement class="theme-grid">
+                    <ui:Button name="themeMidnight" class="theme-card theme-midnight">
+                        <ui:VisualElement class="theme-preview" picking-mode="Ignore">
+                            <ui:VisualElement class="theme-mock" picking-mode="Ignore">
+                                <ui:VisualElement class="theme-mock-line" picking-mode="Ignore"/>
+                                <ui:VisualElement class="theme-mock-line theme-mock-short" picking-mode="Ignore"/>
+                                <ui:VisualElement class="theme-mock-pill" picking-mode="Ignore"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="theme-caption" picking-mode="Ignore">
+                            <ui:Label name="themeMidnightName" class="theme-name" picking-mode="Ignore"/>
+                            <ui:Label name="themeMidnightTag" class="theme-tag hidden" picking-mode="Ignore"/>
+                        </ui:VisualElement>
+                        <ui:Label name="themeMidnightNote" class="theme-note" picking-mode="Ignore"/>
+                    </ui:Button>
+                    <ui:Button name="themeOcean" class="theme-card theme-ocean">
+                        <ui:VisualElement class="theme-preview" picking-mode="Ignore">
+                            <ui:VisualElement class="theme-mock" picking-mode="Ignore">
+                                <ui:VisualElement class="theme-mock-line" picking-mode="Ignore"/>
+                                <ui:VisualElement class="theme-mock-line theme-mock-short" picking-mode="Ignore"/>
+                                <ui:VisualElement class="theme-mock-pill" picking-mode="Ignore"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="theme-caption" picking-mode="Ignore">
+                            <ui:Label name="themeOceanName" class="theme-name" picking-mode="Ignore"/>
+                            <ui:Label name="themeOceanTag" class="theme-tag hidden" picking-mode="Ignore"/>
+                        </ui:VisualElement>
+                        <ui:Label name="themeOceanNote" class="theme-note" picking-mode="Ignore"/>
+                    </ui:Button>
+                    <ui:Button name="themeForest" class="theme-card theme-forest">
+                        <ui:VisualElement class="theme-preview" picking-mode="Ignore">
+                            <ui:VisualElement class="theme-mock" picking-mode="Ignore">
+                                <ui:VisualElement class="theme-mock-line" picking-mode="Ignore"/>
+                                <ui:VisualElement class="theme-mock-line theme-mock-short" picking-mode="Ignore"/>
+                                <ui:VisualElement class="theme-mock-pill" picking-mode="Ignore"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="theme-caption" picking-mode="Ignore">
+                            <ui:Label name="themeForestName" class="theme-name" picking-mode="Ignore"/>
+                            <ui:Label name="themeForestTag" class="theme-tag hidden" picking-mode="Ignore"/>
+                        </ui:VisualElement>
+                        <ui:Label name="themeForestNote" class="theme-note" picking-mode="Ignore"/>
+                    </ui:Button>
+                    <ui:Button name="themeEmber" class="theme-card theme-ember">
+                        <ui:VisualElement class="theme-preview" picking-mode="Ignore">
+                            <ui:VisualElement class="theme-mock" picking-mode="Ignore">
+                                <ui:VisualElement class="theme-mock-line" picking-mode="Ignore"/>
+                                <ui:VisualElement class="theme-mock-line theme-mock-short" picking-mode="Ignore"/>
+                                <ui:VisualElement class="theme-mock-pill" picking-mode="Ignore"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="theme-caption" picking-mode="Ignore">
+                            <ui:Label name="themeEmberName" class="theme-name" picking-mode="Ignore"/>
+                            <ui:Label name="themeEmberTag" class="theme-tag hidden" picking-mode="Ignore"/>
+                        </ui:VisualElement>
+                        <ui:Label name="themeEmberNote" class="theme-note" picking-mode="Ignore"/>
+                    </ui:Button>
+                    <ui:Button name="themeDaylight" class="theme-card theme-daylight">
+                        <ui:VisualElement class="theme-preview" picking-mode="Ignore">
+                            <ui:VisualElement class="theme-mock" picking-mode="Ignore">
+                                <ui:VisualElement class="theme-mock-line" picking-mode="Ignore"/>
+                                <ui:VisualElement class="theme-mock-line theme-mock-short" picking-mode="Ignore"/>
+                                <ui:VisualElement class="theme-mock-pill" picking-mode="Ignore"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="theme-caption" picking-mode="Ignore">
+                            <ui:Label name="themeDaylightName" class="theme-name" picking-mode="Ignore"/>
+                            <ui:Label name="themeDaylightTag" class="theme-tag hidden" picking-mode="Ignore"/>
+                        </ui:VisualElement>
+                        <ui:Label name="themeDaylightNote" class="theme-note" picking-mode="Ignore"/>
+                    </ui:Button>
+                </ui:VisualElement>
+                <ui:Label name="settingsStatus" class="status"/>
+                <ui:Button name="settingsDone" class="primary"/>
             </ui:VisualElement>
         </ui:ScrollView>
         <ui:Label name="pilotNotice" class="footer"/>
